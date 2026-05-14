@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "generated": "2026-05-14",
+    "source": "Pesquisa ICP via /pesquisa-rapida (perplexity_search x3 ângulos)",
+    "purpose": "Eval prompts diversificadas — testar tool selection e param hints"
+  },
+  "personas": [
+    {
+      "id": "A_iniciante",
+      "label": "Iniciante coloquial — infoprodutora solo",
+      "name": "Carla",
+      "context": "Vende mentoria de organização doméstica via WhatsApp (R$ 997). Acabou de migrar do WhatsApp pessoal pro Clint. Mistura termos técnicos com palavras do dia a dia.",
+      "vocabulary": [
+        "deu venda",
+        "tá no carrinho",
+        "tá quase fechando",
+        "essa galera que entrou ontem",
+        "tô perdida",
+        "como faço",
+        "me ajuda",
+        "vi no story",
+        "deu PIX",
+        "comprou pelo link",
+        "tem que mandar mensagem",
+        "tô atrás dela"
+      ],
+      "anti_vocabulary": [
+        "MRR",
+        "LTV",
+        "CAC",
+        "ROAS",
+        "cohort",
+        "win rate",
+        "stage velocity",
+        "Q4",
+        "YoY"
+      ],
+      "date_style": "vago — 'ontem', 'semana passada', 'hoje cedo', 'agorinha', 'tá fazendo uma semana'",
+      "tone": "coloquial, pergunta direto sem rodeio, abreviações tipo voz no WhatsApp, sem letra maiúscula no começo das frases, usa interjeições ('né', 'pô', 'meu Deus')",
+      "typical_questions": [
+        "como vejo quem comprou ontem?",
+        "preciso mandar mensagem pra Bruna, acha o WhatsApp dela",
+        "rolou venda essa semana?",
+        "quanto faturei esse mês mesmo?",
+        "me mostra meus leads quentes",
+        "essa galera que entrou no carrinho ontem"
+      ]
+    },
+    {
+      "id": "B_intermediario",
+      "label": "Intermediário operacional — SDR/Closer combo",
+      "name": "Felipe",
+      "context": "Trabalha em time de 3 pessoas em curso online (ticket R$ 2.500-R$ 4.500). Usa Clint diariamente. Fluente em pipeline, follow-up, qualificação. Vocabulário operacional de vendas BR-PT.",
+      "vocabulary": [
+        "lead quente",
+        "lead frio",
+        "MQL",
+        "SQL",
+        "ticket médio",
+        "etapa do funil",
+        "objeção de preço",
+        "no-show",
+        "follow-up D+1",
+        "qualificar lead",
+        "tag de origem",
+        "pipeline",
+        "kanban",
+        "fechamento",
+        "lost reason",
+        "ganhou/perdeu",
+        "deal aberto",
+        "estágio",
+        "conversão por etapa",
+        "sequência de mensagens",
+        "cadência"
+      ],
+      "anti_vocabulary": [
+        "cohort retention",
+        "ARR",
+        "stage velocity index",
+        "MoM growth"
+      ],
+      "date_style": "específico mas amigável — 'essa semana', 'segunda passada', 'dia 5', 'mês passado', 'últimos 7 dias'",
+      "tone": "direto, profissional, usa termos técnicos de vendas, frases curtas, sem floreio. Tipo conversa entre vendedores: 'me lista os deals na etapa Reunião agendada da semana passada'",
+      "typical_questions": [
+        "lista os deals na etapa Proposta enviada essa semana",
+        "quais leads vieram pela origem Instagram esse mês?",
+        "preciso ver as conversas com a tag VIP",
+        "manda template de cobrança pro contato X",
+        "quem tá sem follow-up há mais de 3 dias?",
+        "atualiza o estágio do deal do Mateus pra Ganho",
+        "adiciona a tag 'objeção preço' nesse contato",
+        "ticket médio do funil de mentoria esse mês"
+      ]
+    },
+    {
+      "id": "C_avancado",
+      "label": "Avançado corporativo — Head de Comercial high-ticket",
+      "name": "Renata",
+      "context": "Dirige time de 15 pessoas em produto high-ticket (ticket médio R$ 25k). Integra Clint com Hotmart, faz forecasting, performance review semanal. Vocabulário corporativo + siglas inglesas.",
+      "vocabulary": [
+        "LTV/CAC ratio",
+        "MRR",
+        "ARR",
+        "cohort 2025-Q1",
+        "churn rate",
+        "win rate",
+        "stage velocity",
+        "forecast vs actual",
+        "AR aging",
+        "Q4 2025",
+        "YoY",
+        "MoM",
+        "attribution",
+        "pipeline coverage",
+        "deal slippage",
+        "stage conversion",
+        "rep performance",
+        "weighted pipeline",
+        "P0/P1 priority",
+        "Hotmart integration",
+        "Eduzz checkout"
+      ],
+      "date_style": "absoluto e analítico — 'Q4 2025', 'últimos 90 dias', 'YoY vs Q4 2024', 'YTD', '2025-10-15 até hoje', 'last 30d'",
+      "tone": "executivo, denso, pede comparativos e segmentações múltiplas em uma única pergunta, mistura português e termos em inglês sem aviso. Tipo: 'me dá win rate por SDR comparado Q4 2025 vs Q3 com breakdown por origem'",
+      "typical_questions": [
+        "dashboard de pipeline Q4 2025 com breakdown por canal de origem e SDR",
+        "deals ganhos no último trimestre por valor de ticket, segmentado por origem Hotmart vs orgânico",
+        "win rate por closer YoY",
+        "lista contatos com fields.organization.cohort = '2025-Q1' que ainda estão em estágio Negociação",
+        "pega o chart de conversão por etapa do dashboard principal pra last 30d",
+        "preciso fazer bulk update na origem dos leads que vieram do lançamento de outubro",
+        "templates de mensagem disponíveis pra channel account WhatsApp Official enterprise",
+        "compara métricas de fechamento por SDR YTD"
+      ]
+    }
+  ]
+}

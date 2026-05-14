@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.egg
+
+# Eval intermediates (keep results + report, drop process files)
+tests/batches/
+tests/candidates_batch_*.json
+tests/prompts_persona_*.json
+tests/tool_catalog.json
+tests/tool_schemas.json
+
+# Backups
+*.bak

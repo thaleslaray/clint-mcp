@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clint-mcp"
+version = "0.1.0"
+description = "MCP server for the Clint CRM API (Brazilian) — 46 endpoints, FastMCP + Code Mode"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Thales Laray", email = "thales@laray.com.br" }]
+dependencies = [
+    "fastmcp>=0.5.0",
+    "pydantic-monty==0.0.7",
+    "httpx>=0.27",
+    "anyio>=4.0",
+]
+
+[project.scripts]
+clint-mcp = "clint_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clint_mcp"]

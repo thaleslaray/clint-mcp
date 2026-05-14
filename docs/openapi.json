@@ -1,0 +1,4939 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Clint API",
+    "description": "API for managing contacts, deals, and tags in the Clint application",
+    "contact": {
+      "name": "API Support",
+      "url": "http://www.example.com/support",
+      "email": "support@example.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.clint.digital",
+      "description": "Production API"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Channel Accounts",
+      "description": "Operations related to WhatsApp Official channel accounts (v2)"
+    },
+    {
+      "name": "Chats",
+      "description": "Operations related to WhatsApp Official chats via OpenSearch (v2)"
+    },
+    {
+      "name": "Contacts",
+      "description": "Operations related to managing contacts"
+    },
+    {
+      "name": "Dashboards",
+      "description": "Operations related to analytics dashboards and chart data (v2)."
+    },
+    {
+      "name": "Deals",
+      "description": "Operations related to managing deals"
+    },
+    {
+      "name": "Groups",
+      "description": "Operations related to managing deals"
+    },
+    {
+      "name": "Lost Status",
+      "description": "Operations related to managing lost status"
+    },
+    {
+      "name": "Message Templates",
+      "description": "Operations related to WhatsApp Official message templates (v2)"
+    },
+    {
+      "name": "Messages",
+      "description": "Operations related to WhatsApp Official messages (v2)"
+    },
+    {
+      "name": "Organizations",
+      "description": "Operations related to managing organizations"
+    },
+    {
+      "name": "Origins",
+      "description": "Operations related to managing origins"
+    },
+    {
+      "name": "Tags",
+      "description": "Operations related to managing tags"
+    },
+    {
+      "name": "Users",
+      "description": "Operations related to managing users"
+    }
+  ],
+  "paths": {
+    "/v1/contacts/{id}/tags": {
+      "delete": {
+        "summary": "Remove tag",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Remove a tag from a contact",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "requestBody": {
+          "description": "Tag identifier - provide either tag id or tag name",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "tag_id": {
+                    "type": "string",
+                    "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8",
+                    "description": "The ID of the tag to be removed"
+                  },
+                  "tag_name": {
+                    "type": "string",
+                    "example": "my-tag",
+                    "description": "The name of the tag to be removed"
+                  }
+                },
+                "oneOf": [
+                  {
+                    "required": [
+                      "tag_id"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "tag_name"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "You must provide either a tag id or a tag name"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add tags",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Add tags to a single contact",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "example": "Tag"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          }
+        }
+      }
+    },
+    "/v1/contacts/{id}": {
+      "delete": {
+        "summary": "Remove contact",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Remove a single contact by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get contact",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Retrieve a single contact by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A contact object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Contact"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Update contact",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Update a single contact",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactCreateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Contact updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/components/schemas/ID"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/deals/{id}": {
+      "delete": {
+        "summary": "Remove deal",
+        "tags": [
+          "Deals"
+        ],
+        "description": "Remove a single deal by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get deal",
+        "tags": [
+          "Deals"
+        ],
+        "description": "Retrieve a single deal by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A deal object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Deal"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Update deal",
+        "tags": [
+          "Deals"
+        ],
+        "description": "Update a single deal",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DealUpdateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Deal updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/components/schemas/ID"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tags/{id}": {
+      "delete": {
+        "summary": "Remove tag",
+        "description": "Remove a single tag by ID",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "204": {
+            "$ref": "#/components/responses/204"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get tag",
+        "description": "Retrieve a single tag by ID",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A tag object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Tag"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/account/fields": {
+      "get": {
+        "summary": "List fields",
+        "tags": [
+          "Account"
+        ],
+        "description": "Retrieve a list of fields",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/AccountFields"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/contacts/{id}/attachments": {
+      "get": {
+        "summary": "List contact attachments",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Retrieve a paginated list of attachments (documents) for a specific contact. Each attachment includes a public document URL that can be used directly for download or rendering.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit_100"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of contact attachments",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ContactAttachment"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Param contactId must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Contact not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Contact not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/contacts": {
+      "get": {
+        "summary": "List contacts",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Retrieve a paginated list of contacts",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "description": "Filter by origin ID",
+            "in": "query",
+            "name": "origin_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by contact name",
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "type": "string",
+              "example": "Contact name"
+            }
+          },
+          {
+            "description": "Filter by contact ddi",
+            "in": "query",
+            "name": "ddi",
+            "schema": {
+              "type": "string",
+              "example": "55"
+            }
+          },
+          {
+            "description": "Filter by contact phone",
+            "in": "query",
+            "name": "phone",
+            "schema": {
+              "type": "string",
+              "example": "999999999"
+            }
+          },
+          {
+            "description": "Filter by contact e-mail",
+            "in": "query",
+            "name": "email",
+            "schema": {
+              "type": "string",
+              "example": "contact@email.com"
+            }
+          },
+          {
+            "description": "Filter by contact tag IDs using OR operator. Separated by ','",
+            "in": "query",
+            "name": "tag_ids",
+            "schema": {
+              "type": "string",
+              "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8,99999999-d77b-4e8b-9d35-fd43e972b999"
+            }
+          },
+          {
+            "description": "Filter by contact tag names using OR operator. Separated by ','",
+            "in": "query",
+            "name": "tag_names",
+            "schema": {
+              "type": "string",
+              "example": "tag1,tag2,tag3"
+            }
+          },
+          {
+            "description": "Filter by contact fields. Can be used multiple times for each field",
+            "in": "query",
+            "name": "fields",
+            "style": "deepObject",
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of contacts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Contact"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create contact",
+        "tags": [
+          "Contacts"
+        ],
+        "description": "Create a new Contact",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactCreateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Contact created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/components/schemas/ID"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/deals": {
+      "get": {
+        "summary": "List deals",
+        "tags": [
+          "Deals"
+        ],
+        "description": "Retrieve a paginated list of deals",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "description": "Filter by origin ID",
+            "in": "query",
+            "name": "origin_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by created_at using GTE operator",
+            "in": "query",
+            "name": "created_at_start",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by created_at using LTE operator",
+            "in": "query",
+            "name": "created_at_end",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by updated_at using GTE operator",
+            "in": "query",
+            "name": "updated_at_start",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by updated_at using LTE operator",
+            "in": "query",
+            "name": "updated_at_end",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by user ID",
+            "in": "query",
+            "name": "user_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by user e-mail",
+            "in": "query",
+            "name": "user_email",
+            "schema": {
+              "type": "string",
+              "example": "user@email.com"
+            }
+          },
+          {
+            "description": "Filter by contact ID",
+            "in": "query",
+            "name": "contact_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by contact phone",
+            "in": "query",
+            "name": "phone",
+            "schema": {
+              "type": "string",
+              "example": "999999999"
+            }
+          },
+          {
+            "description": "Filter by contact e-mail",
+            "in": "query",
+            "name": "email",
+            "schema": {
+              "type": "string",
+              "example": "contact@email.com"
+            }
+          },
+          {
+            "description": "Filter by tag IDs using OR operator. Separated by ','",
+            "in": "query",
+            "name": "tag_ids",
+            "schema": {
+              "type": "string",
+              "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8,99999999-d77b-4e8b-9d35-fd43e972b999"
+            }
+          },
+          {
+            "description": "Filter by tag names using OR operator. Separated by ','",
+            "in": "query",
+            "name": "tag_names",
+            "schema": {
+              "type": "string",
+              "example": "tag1,tag2,tag3"
+            }
+          },
+          {
+            "description": "Filter by status",
+            "in": "query",
+            "name": "status",
+            "schema": {
+              "$ref": "#/components/schemas/DealStatus"
+            }
+          },
+          {
+            "description": "Filter by stage ID",
+            "in": "query",
+            "name": "stage_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by updated_stage_at using GTE operator",
+            "in": "query",
+            "name": "updated_stage_at_start",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by updated_stage_at using LTE operator",
+            "in": "query",
+            "name": "updated_stage_at_end",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by deal fields. Can be used multiple times for each field",
+            "in": "query",
+            "name": "fields",
+            "style": "deepObject",
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "description": "Filter by won_at using GTE operator",
+            "in": "query",
+            "name": "won_at_start",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by won_at using LTE operator",
+            "in": "query",
+            "name": "won_at_end",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by lost_at using GTE operator",
+            "in": "query",
+            "name": "lost_at_start",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          },
+          {
+            "description": "Filter by lost_at_at using LTE operator",
+            "in": "query",
+            "name": "lost_at_end",
+            "schema": {
+              "$ref": "#/components/schemas/DateTime"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of deals",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Deal"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create deal",
+        "tags": [
+          "Deals"
+        ],
+        "description": "Create a new Deal",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DealCreateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Deal created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/components/schemas/ID"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/groups/{id}": {
+      "get": {
+        "summary": "Get group",
+        "tags": [
+          "Groups"
+        ],
+        "description": "Retrieve a single group by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A group object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Group"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/groups": {
+      "get": {
+        "summary": "List groups",
+        "tags": [
+          "Groups"
+        ],
+        "description": "Retrieve a paginated list of groups",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of groups",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Group"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lost-status/{id}": {
+      "get": {
+        "summary": "Get lost status",
+        "tags": [
+          "Lost Status"
+        ],
+        "description": "Retrieve a single lost status by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A lost status object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/LostStatus"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lost-status": {
+      "get": {
+        "summary": "List lost status",
+        "tags": [
+          "Lost Status"
+        ],
+        "description": "Retrieve a paginated list of lost status",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of lost status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/LostStatus"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organizations/{id}": {
+      "get": {
+        "summary": "Get organization",
+        "tags": [
+          "Organizations"
+        ],
+        "description": "Retrieve a single organization by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An organization object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Organization"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Update organization",
+        "tags": [
+          "Organizations"
+        ],
+        "description": "Update a single organization",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrganizationCreateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Organization updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$ref": "#/components/schemas/ID"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/origins/{id}": {
+      "get": {
+        "summary": "Get origin",
+        "tags": [
+          "Origins"
+        ],
+        "description": "Retrieve a single origin by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A origin object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Origin"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/origins": {
+      "get": {
+        "summary": "List origins",
+        "tags": [
+          "Origins"
+        ],
+        "description": "Retrieve a paginated list of origins",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "description": "Filter by group ID",
+            "in": "query",
+            "name": "group_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of origins",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Origin"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tags": {
+      "get": {
+        "summary": "List tags",
+        "description": "Retrieve a paginated list of tags",
+        "tags": [
+          "Tags"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "description": "Filter by tag name",
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "type": "string",
+              "example": "Tag name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of tags",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Tag"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create tag",
+        "description": "Create a new tag",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "tags": [
+          "Tags"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TagCreateSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        }
+      }
+    },
+    "/v1/users/{id}": {
+      "get": {
+        "summary": "Get user",
+        "tags": [
+          "Users"
+        ],
+        "description": "Retrieve a single user by ID",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A user object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": "200",
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/User"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "summary": "List users",
+        "tags": [
+          "Users"
+        ],
+        "description": "Retrieve a paginated list of users",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of users",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Paginated"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/User"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/channel-accounts/{id}": {
+      "get": {
+        "summary": "Get channel account",
+        "tags": [
+          "Channel Accounts"
+        ],
+        "description": "Retrieve a single WhatsApp Official channel account by ID",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A channel account object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": 200,
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/ChannelAccount"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param ID must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Channel account not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/channel-accounts": {
+      "get": {
+        "summary": "List channel accounts",
+        "tags": [
+          "Channel Accounts"
+        ],
+        "description": "Retrieve a paginated list of WhatsApp Official channel accounts. Only returns channels with type WHATSAPP_OFFICIAL that are not deleted.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit_100"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of channel accounts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ChannelAccount"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          }
+        }
+      }
+    },
+    "/v2/charts/{id}/data": {
+      "get": {
+        "summary": "Get single chart data",
+        "tags": [
+          "Dashboards"
+        ],
+        "description": "Execute a single chart query and return its data.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          },
+          {
+            "description": "Start date filter (inclusive)",
+            "in": "query",
+            "name": "date_start",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "example": "2026-01-01"
+            }
+          },
+          {
+            "description": "End date filter (inclusive)",
+            "in": "query",
+            "name": "date_end",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "example": "2026-12-31"
+            }
+          },
+          {
+            "description": "Filter by user ID",
+            "in": "query",
+            "name": "user_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by origin ID",
+            "in": "query",
+            "name": "origin_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by origin group ID",
+            "in": "query",
+            "name": "origin_group_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by tag ID",
+            "in": "query",
+            "name": "tag_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Timezone for date calculations",
+            "in": "query",
+            "name": "timezone",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "example": "America/Sao_Paulo"
+            }
+          },
+          {
+            "description": "Limit rows returned (applies to table/list chart types)",
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 15000
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Chart data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/ChartData"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error (e.g. invalid date format)"
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Chart not found"
+          }
+        }
+      }
+    },
+    "/v2/chats/channel-account/{channelAccountId}": {
+      "get": {
+        "summary": "List chats by channel account",
+        "tags": [
+          "Chats"
+        ],
+        "description": "Retrieve a paginated list of chats for a specific channel account. Results are sorted by last_message_at descending.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "description": "UUID of the channel account",
+            "in": "path",
+            "name": "channelAccountId",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
+            },
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit_200"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of chats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Chat"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param channel_account_id must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          }
+        }
+      }
+    },
+    "/v2/chats/contact/{contactId}": {
+      "get": {
+        "summary": "List chats by contact",
+        "tags": [
+          "Chats"
+        ],
+        "description": "Retrieve a paginated list of chats for a specific contact. Results are sorted by last_message_at descending.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "description": "UUID of the contact",
+            "in": "path",
+            "name": "contactId",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
+            },
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit_200"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of chats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Chat"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param contact_id must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          }
+        }
+      }
+    },
+    "/v2/chats/{id}": {
+      "get": {
+        "summary": "Get chat",
+        "tags": [
+          "Chats"
+        ],
+        "description": "Retrieve a single chat by ID. Only returns chats belonging to the authenticated owner.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A chat object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": 200,
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Chat"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param ID must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Chat not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Chat not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/dashboards/{id}/data": {
+      "get": {
+        "summary": "Get dashboard chart data",
+        "tags": [
+          "Dashboards"
+        ],
+        "description": "Execute dashboard chart queries and return data. Charts are paginated at 10 per page. Individual chart failures are handled gracefully and return an error message instead of failing the entire request.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "description": "Start date filter (inclusive)",
+            "in": "query",
+            "name": "date_start",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "example": "2026-01-01"
+            }
+          },
+          {
+            "description": "End date filter (inclusive)",
+            "in": "query",
+            "name": "date_end",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "example": "2026-12-31"
+            }
+          },
+          {
+            "description": "Filter by user ID",
+            "in": "query",
+            "name": "user_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by origin ID",
+            "in": "query",
+            "name": "origin_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by origin group ID",
+            "in": "query",
+            "name": "origin_group_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Filter by tag ID",
+            "in": "query",
+            "name": "tag_id",
+            "schema": {
+              "$ref": "#/components/schemas/ID"
+            }
+          },
+          {
+            "description": "Timezone for date calculations",
+            "in": "query",
+            "name": "timezone",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "example": "America/Sao_Paulo"
+            }
+          },
+          {
+            "description": "Limit rows returned per chart (applies to table/list chart types)",
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 15000
+            }
+          },
+          {
+            "description": "Comma-separated list of chart IDs to fetch (returns only these charts instead of all)",
+            "in": "query",
+            "name": "chart_ids",
+            "schema": {
+              "type": "string",
+              "example": "uuid-1,uuid-2"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Chart data for the dashboard",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "object",
+                          "properties": {
+                            "charts": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/components/schemas/ChartData"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error (e.g. invalid date format)"
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Dashboard not found"
+          }
+        }
+      }
+    },
+    "/v2/dashboards/{id}": {
+      "get": {
+        "summary": "Retrieve a dashboard",
+        "tags": [
+          "Dashboards"
+        ],
+        "description": "Retrieve a single dashboard with its list of charts.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dashboard details with charts",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/Dashboard"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Dashboard not found"
+          }
+        }
+      }
+    },
+    "/v2/dashboards": {
+      "get": {
+        "summary": "List dashboards",
+        "tags": [
+          "Dashboards"
+        ],
+        "description": "Retrieve a paginated list of dashboards.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of dashboards",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/DashboardSummary"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          }
+        }
+      }
+    },
+    "/v2/message-templates/{id}": {
+      "get": {
+        "summary": "Get message template",
+        "tags": [
+          "Message Templates"
+        ],
+        "description": "Retrieve a single message template by ID. Validates that the template belongs to a WhatsApp Official channel account owned by the authenticated user.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A message template object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": 200,
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/MessageTemplate"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param ID must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Message template not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Message template not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/message-templates": {
+      "get": {
+        "summary": "List message templates",
+        "tags": [
+          "Message Templates"
+        ],
+        "description": "Retrieve a paginated list of message templates linked to a WhatsApp Official channel account. The channel_account_id query parameter is required and must belong to the authenticated owner.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "description": "UUID of the channel account (required)",
+            "in": "query",
+            "name": "channel_account_id",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
+            },
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit_200"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of message templates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/MessageTemplate"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid channel_account_id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Query param channel_account_id is required"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Channel account not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/chat/{chatId}": {
+      "get": {
+        "summary": "List messages by chat",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Retrieve a paginated list of messages for a specific chat. Messages are sorted by created_at descending.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "description": "UUID of the chat",
+            "in": "path",
+            "name": "chatId",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
+            },
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_limit"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_offset"
+          },
+          {
+            "$ref": "#/components/parameters/queryParam_page"
+          },
+          {
+            "name": "content_type",
+            "in": "query",
+            "required": false,
+            "description": "Filter messages by content type",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "TEXT",
+                "IMAGE",
+                "AUDIO",
+                "VIDEO",
+                "DOCUMENT"
+              ],
+              "example": "TEXT"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of messages",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PaginatedV2"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/Message"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param chat_id must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          }
+        }
+      }
+    },
+    "/v2/messages/{id}": {
+      "get": {
+        "summary": "Get message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Retrieve a single message by ID. Only returns messages belonging to the authenticated owner.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          },
+          {
+            "$ref": "#/components/parameters/pathParam_id"
+          },
+          {
+            "name": "content_type",
+            "in": "query",
+            "required": false,
+            "description": "Filter message by content type",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "TEXT",
+                "IMAGE",
+                "AUDIO",
+                "VIDEO",
+                "DOCUMENT"
+              ],
+              "example": "TEXT"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A message object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "type": "integer",
+                          "example": 200,
+                          "description": "Response status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "$ref": "#/components/schemas/Message"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid UUID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param ID must be a valid UUID"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Message not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Message not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/audio": {
+      "post": {
+        "summary": "Send audio message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Send an audio message via WhatsApp Official. The audio URL is sent directly to the Meta API. No caption support for audio messages. Returns immediately with QUEUED status.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channel_account_id",
+                  "contact_id",
+                  "url"
+                ],
+                "properties": {
+                  "channel_account_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the WhatsApp Official channel account",
+                    "example": "550e8400-e29b-41d4-a716-446655440001"
+                  },
+                  "contact_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the contact to send the audio to",
+                    "example": "550e8400-e29b-41d4-a716-446655440002"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Direct URL of the audio file to send",
+                    "example": "https://example.com/audio.ogg"
+                  },
+                  "chat_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Optional UUID of an existing chat. If not provided, the system will find or create a chat automatically.",
+                    "example": "550e8400-e29b-41d4-a716-446655440003"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Audio message queued for sending",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "message_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440099"
+                        },
+                        "chat_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440003"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "QUEUED"
+                          ],
+                          "example": "QUEUED"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param url is required"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/document": {
+      "post": {
+        "summary": "Send document message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Send a document message via WhatsApp Official. The document URL is sent directly to the Meta API. Filename is required and will be displayed to the recipient. Returns immediately with QUEUED status.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channel_account_id",
+                  "contact_id",
+                  "url",
+                  "filename"
+                ],
+                "properties": {
+                  "channel_account_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the WhatsApp Official channel account",
+                    "example": "550e8400-e29b-41d4-a716-446655440001"
+                  },
+                  "contact_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the contact to send the document to",
+                    "example": "550e8400-e29b-41d4-a716-446655440002"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Direct URL of the document to send",
+                    "example": "https://example.com/report.pdf"
+                  },
+                  "filename": {
+                    "type": "string",
+                    "description": "Filename displayed to the recipient",
+                    "example": "report.pdf"
+                  },
+                  "caption": {
+                    "type": "string",
+                    "description": "Optional caption for the document",
+                    "example": "Monthly report"
+                  },
+                  "chat_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Optional UUID of an existing chat. If not provided, the system will find or create a chat automatically.",
+                    "example": "550e8400-e29b-41d4-a716-446655440003"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Document message queued for sending",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "message_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440099"
+                        },
+                        "chat_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440003"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "QUEUED"
+                          ],
+                          "example": "QUEUED"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param filename is required"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/image": {
+      "post": {
+        "summary": "Send image message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Send an image message via WhatsApp Official. The image URL is sent directly to the Meta API (no upload required). Returns immediately with QUEUED status.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channel_account_id",
+                  "contact_id",
+                  "url"
+                ],
+                "properties": {
+                  "channel_account_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the WhatsApp Official channel account",
+                    "example": "550e8400-e29b-41d4-a716-446655440001"
+                  },
+                  "contact_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the contact to send the image to",
+                    "example": "550e8400-e29b-41d4-a716-446655440002"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Direct URL of the image to send",
+                    "example": "https://example.com/photo.jpg"
+                  },
+                  "caption": {
+                    "type": "string",
+                    "description": "Optional caption for the image",
+                    "example": "Check out this photo!"
+                  },
+                  "chat_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Optional UUID of an existing chat. If not provided, the system will find or create a chat automatically.",
+                    "example": "550e8400-e29b-41d4-a716-446655440003"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Image message queued for sending",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "message_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "UUID of the created message",
+                          "example": "550e8400-e29b-41d4-a716-446655440099"
+                        },
+                        "chat_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "UUID of the chat (existing or newly created)",
+                          "example": "550e8400-e29b-41d4-a716-446655440003"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "QUEUED"
+                          ],
+                          "description": "Initial message status",
+                          "example": "QUEUED"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param url is required"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/template": {
+      "post": {
+        "summary": "Send template message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Send a WhatsApp message template (HSM). Template messages can be sent at any time, even when the 24-hour messaging window is closed. The template must be APPROVED by Meta and belong to the specified channel account. Variable placeholders ({{1}}, {{2}}, etc.) in the template are replaced with the provided parameter values.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channel_account_id",
+                  "contact_id",
+                  "template_id"
+                ],
+                "properties": {
+                  "channel_account_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the WhatsApp Official channel account",
+                    "example": "550e8400-e29b-41d4-a716-446655440001"
+                  },
+                  "contact_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the contact to send the template to",
+                    "example": "550e8400-e29b-41d4-a716-446655440002"
+                  },
+                  "template_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the message template to send. Must have APPROVED status.",
+                    "example": "550e8400-e29b-41d4-a716-446655440010"
+                  },
+                  "chat_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Optional UUID of an existing chat. If not provided, the system will find or create a chat automatically.",
+                    "example": "550e8400-e29b-41d4-a716-446655440003"
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "description": "Variable values to replace {{1}}, {{2}}, etc. in the template components. Each array position maps to the corresponding placeholder number.",
+                    "properties": {
+                      "header": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Values for header component variables",
+                        "example": [
+                          "John"
+                        ]
+                      },
+                      "body": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Values for body component variables",
+                        "example": [
+                          "John",
+                          "12345",
+                          "2024-01-15"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Template message queued for sending",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "message_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440099"
+                        },
+                        "chat_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "example": "550e8400-e29b-41d4-a716-446655440003"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "QUEUED"
+                          ],
+                          "example": "QUEUED"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Template must have APPROVED status"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Message template not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/messages/text": {
+      "post": {
+        "summary": "Send text message",
+        "tags": [
+          "Messages"
+        ],
+        "description": "Send a text message via WhatsApp Official. Reuses the existing message sending flow — validates channel account, contact, and messaging window, then dispatches to the WhatsApp provider. Returns immediately with QUEUED status.",
+        "servers": [
+          {
+            "url": "https://api.clint.digital/v2",
+            "description": "Production API (v2)"
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/headerParamXAPIKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "channel_account_id",
+                  "contact_id",
+                  "message"
+                ],
+                "properties": {
+                  "channel_account_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the WhatsApp Official channel account",
+                    "example": "550e8400-e29b-41d4-a716-446655440001"
+                  },
+                  "contact_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "UUID of the contact to send the message to",
+                    "example": "550e8400-e29b-41d4-a716-446655440002"
+                  },
+                  "message": {
+                    "type": "string",
+                    "description": "Text content of the message",
+                    "example": "Hello, how can I help you?"
+                  },
+                  "chat_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "Optional UUID of an existing chat. If not provided, the system will find or create a chat automatically.",
+                    "example": "550e8400-e29b-41d4-a716-446655440003"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Message queued for sending",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 200
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "success": {
+                          "type": "boolean",
+                          "example": true
+                        },
+                        "message_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "UUID of the created message",
+                          "example": "550e8400-e29b-41d4-a716-446655440099"
+                        },
+                        "chat_id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "description": "UUID of the chat (existing or newly created)",
+                          "example": "550e8400-e29b-41d4-a716-446655440003"
+                        },
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "QUEUED"
+                          ],
+                          "description": "Initial message status",
+                          "example": "QUEUED"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Param channel_account_id is required"
+                    }
+                  }
+                },
+                "examples": {
+                  "missing_field": {
+                    "summary": "Missing required field",
+                    "value": {
+                      "status": 400,
+                      "message": "Param channel_account_id is required"
+                    }
+                  },
+                  "invalid_uuid": {
+                    "summary": "Invalid UUID format",
+                    "value": {
+                      "status": 400,
+                      "message": "Param channel_account_id must be a valid UUID"
+                    }
+                  },
+                  "empty_message": {
+                    "summary": "Empty message content",
+                    "value": {
+                      "status": 400,
+                      "message": "Param message must not be empty"
+                    }
+                  },
+                  "disconnected": {
+                    "summary": "Channel account disconnected",
+                    "value": {
+                      "status": 400,
+                      "message": "Channel account is not connected"
+                    }
+                  },
+                  "wrong_type": {
+                    "summary": "Channel account type not supported",
+                    "value": {
+                      "status": 400,
+                      "message": "Channel account type must be WHATSAPP_OFFICIAL"
+                    }
+                  },
+                  "no_phone": {
+                    "summary": "Contact has no phone number",
+                    "value": {
+                      "status": 400,
+                      "message": "Contact does not have a phone number"
+                    }
+                  },
+                  "window_closed": {
+                    "summary": "Messaging window closed",
+                    "value": {
+                      "status": 400,
+                      "message": "Messaging window is closed. Use a template message to reopen the conversation"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication error - invalid or missing api-token"
+          },
+          "404": {
+            "description": "Resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Channel account not found"
+                    }
+                  }
+                },
+                "examples": {
+                  "channel_not_found": {
+                    "summary": "Channel account not found or wrong owner",
+                    "value": {
+                      "status": 404,
+                      "message": "Channel account not found"
+                    }
+                  },
+                  "contact_not_found": {
+                    "summary": "Contact not found or wrong owner",
+                    "value": {
+                      "status": 404,
+                      "message": "Contact not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "headerParamXAPIKey": {
+        "description": "API Token",
+        "in": "header",
+        "name": "api-token",
+        "schema": {
+          "type": "string"
+        },
+        "required": true
+      },
+      "pathParam_id": {
+        "description": "UUID",
+        "in": "path",
+        "name": "id",
+        "schema": {
+          "type": "string",
+          "format": "uuid",
+          "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8"
+        },
+        "required": true
+      },
+      "queryParam_limit_100": {
+        "description": "Max number of rows returned",
+        "in": "query",
+        "name": "limit",
+        "schema": {
+          "default": 100,
+          "maximum": 100,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "queryParam_page": {
+        "description": "Select the page of the result",
+        "in": "query",
+        "name": "page",
+        "schema": {
+          "default": 1,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "queryParam_limit": {
+        "description": "Max number of rows returned",
+        "in": "query",
+        "name": "limit",
+        "schema": {
+          "default": 200,
+          "maximum": 1000,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "queryParam_offset": {
+        "description": "Number of rows skipped of the result",
+        "in": "query",
+        "name": "offset",
+        "schema": {
+          "default": 0,
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "queryParam_limit_200": {
+        "description": "Max number of rows returned",
+        "in": "query",
+        "name": "limit",
+        "schema": {
+          "default": 200,
+          "maximum": 200,
+          "minimum": 1,
+          "type": "integer"
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "No Content"
+      },
+      "200": {
+        "description": "OK"
+      }
+    },
+    "schemas": {
+      "AccountFields": {
+        "type": "object",
+        "properties": {
+          "groups": {
+            "type": "object",
+            "properties": {
+              "DEAL": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "CONTACT": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "ORGANIZATION": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "fields": {
+            "type": "object",
+            "properties": {
+              "DEAL": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "TEXT"
+                  },
+                  "group": {
+                    "type": "string",
+                    "example": "default"
+                  },
+                  "label": {
+                    "type": "string",
+                    "example": "notes"
+                  }
+                }
+              },
+              "CONTACT": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "TEXT"
+                  },
+                  "group": {
+                    "type": "string",
+                    "example": "default"
+                  },
+                  "label": {
+                    "type": "string",
+                    "example": "notes"
+                  }
+                }
+              },
+              "ORGANIZATION": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "TEXT"
+                  },
+                  "group": {
+                    "type": "string",
+                    "example": "default"
+                  },
+                  "label": {
+                    "type": "string",
+                    "example": "notes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ContactAttachment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "contact_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "updated_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "uploaded_by": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/components/schemas/ID"
+              },
+              "first_name": {
+                "type": "string",
+                "example": "Maria"
+              },
+              "last_name": {
+                "type": "string",
+                "example": "Silva"
+              }
+            }
+          },
+          "document": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/components/schemas/ID"
+              },
+              "name": {
+                "type": "string",
+                "example": "contract-signed"
+              },
+              "file_name": {
+                "type": "string",
+                "example": "contract-signed.pdf"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "example": "https://file.clint.digital/.../contract-signed.pdf"
+              },
+              "extension": {
+                "type": "string",
+                "example": "pdf"
+              },
+              "file_size": {
+                "type": "integer",
+                "example": 204800,
+                "description": "File size in bytes"
+              }
+            }
+          }
+        }
+      },
+      "DateTime": {
+        "type": "string",
+        "format": "date-time",
+        "example": "2020-01-01T14:15:00.000000+00:00"
+      },
+      "ID": {
+        "type": "string",
+        "format": "uuid",
+        "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8"
+      },
+      "Paginated": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "example": "200",
+            "description": "Response status"
+          },
+          "totalCount": {
+            "type": "integer",
+            "example": "50",
+            "description": "Total items based on current filters"
+          },
+          "page": {
+            "type": "integer",
+            "example": "1",
+            "description": "Current page"
+          },
+          "totalPages": {
+            "type": "integer",
+            "example": "10",
+            "description": "Total pages based on current filters"
+          },
+          "hasNext": {
+            "type": "boolean",
+            "example": "true",
+            "description": "Indicates that has next page"
+          },
+          "hasPrevious": {
+            "type": "boolean",
+            "example": "true",
+            "description": "Indicates that has previous page"
+          }
+        }
+      },
+      "Contact": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "updated_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "name": {
+            "type": "string",
+            "example": "Contact name"
+          },
+          "email": {
+            "type": "string",
+            "example": "contact@email.com"
+          },
+          "organization": {
+            "type": "string",
+            "example": "Organization name"
+          },
+          "instagram": {
+            "type": "string",
+            "example": "Instagram ID"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Tag"
+            }
+          },
+          "fields": {
+            "$ref": "#/components/schemas/Fields"
+          },
+          "fullPhone": {
+            "$ref": "#/components/schemas/FullPhone"
+          }
+        }
+      },
+      "Fields": {
+        "type": "object"
+      },
+      "FullPhone": {
+        "type": "string",
+        "example": "+5548999999999"
+      },
+      "Tag": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Tag name"
+          },
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          }
+        }
+      },
+      "TagColor": {
+        "type": "string",
+        "default": "#f44336",
+        "enum": [
+          "#f44336",
+          "#e91e63",
+          "#9c27b0",
+          "#673ab7",
+          "#3f51b5",
+          "#2196f3",
+          "#03a9f4",
+          "#00bcd4",
+          "#009688",
+          "#4caf50",
+          "#8bc34a",
+          "#faa200",
+          "#ff9800",
+          "#ff5722",
+          "#795548",
+          "#607d8b"
+        ]
+      },
+      "Deal": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "origin_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/components/schemas/ID"
+              },
+              "full_name": {
+                "type": "string",
+                "example": "User full name"
+              }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/components/schemas/ID"
+              },
+              "name": {
+                "type": "string",
+                "example": "Contact name"
+              },
+              "email": {
+                "type": "string",
+                "example": "contact@email.com"
+              },
+              "phone": {
+                "type": "string",
+                "example": "+5548999999999"
+              }
+            }
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "stage_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "updated_stage_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DealStatus"
+          },
+          "won_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "won_by": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "lost_status_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "lost_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "lost_by": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "fields": {
+            "$ref": "#/components/schemas/Fields"
+          }
+        }
+      },
+      "DealStatus": {
+        "type": "string",
+        "default": "OPEN",
+        "enum": [
+          "OPEN",
+          "WON",
+          "LOST"
+        ]
+      },
+      "Group": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Group name"
+          },
+          "archived_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "archived_by": {
+            "$ref": "#/components/schemas/ID"
+          }
+        }
+      },
+      "LostStatus": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Lost status name"
+          }
+        }
+      },
+      "Organization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "updated_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "name": {
+            "type": "string",
+            "example": "Organization name"
+          },
+          "fields": {
+            "$ref": "#/components/schemas/Fields"
+          }
+        }
+      },
+      "Origin": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Origin name"
+          },
+          "group": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "#/components/schemas/ID"
+              },
+              "name": {
+                "type": "string",
+                "example": "Group name"
+              }
+            }
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/ID"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "archived_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "archived_by": {
+            "$ref": "#/components/schemas/ID"
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "email": {
+            "type": "string",
+            "example": "User e-mail"
+          },
+          "first_name": {
+            "type": "string",
+            "example": "User first name"
+          },
+          "last_name": {
+            "type": "string",
+            "example": "User last name"
+          }
+        }
+      },
+      "ChannelAccount": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "name": {
+            "type": "string",
+            "example": "WhatsApp Business"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "CONNECTED",
+              "DISCONNECTED",
+              "CANCELLED"
+            ],
+            "example": "CONNECTED"
+          },
+          "avatar": {
+            "type": "string",
+            "nullable": true,
+            "example": "https://example.com/avatar.jpg"
+          },
+          "identifier": {
+            "type": "string",
+            "nullable": true,
+            "example": "5548999999999"
+          },
+          "team_id": {
+            "$ref": "#/components/schemas/ID",
+            "nullable": true
+          }
+        }
+      },
+      "PaginatedV2": {
+        "type": "object",
+        "description": "V2 paginated response with snake_case keys",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "example": 200,
+            "description": "Response status"
+          },
+          "total_count": {
+            "type": "integer",
+            "example": 50,
+            "description": "Total items based on current filters"
+          },
+          "page": {
+            "type": "integer",
+            "example": 1,
+            "description": "Current page"
+          },
+          "total_pages": {
+            "type": "integer",
+            "example": 10,
+            "description": "Total pages based on current filters"
+          },
+          "has_next": {
+            "type": "boolean",
+            "example": true,
+            "description": "Indicates that has next page"
+          },
+          "has_previous": {
+            "type": "boolean",
+            "example": false,
+            "description": "Indicates that has previous page"
+          }
+        }
+      },
+      "ChartData": {
+        "type": "object",
+        "description": "Chart data returned from a Cube.js query. The result format varies by chart type.",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Monthly Revenue"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "line",
+              "area",
+              "bar",
+              "stackedBar",
+              "table",
+              "number",
+              "kpiPanel",
+              "pie",
+              "donut",
+              "funnel"
+            ],
+            "example": "number"
+          },
+          "result": {
+            "description": "Chart result data. Format depends on chart type: number types return {value}, table types return {columns, rows}, series types (line, bar, pie, etc.) return an array of series objects.",
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "Number/KPI chart result",
+                "properties": {
+                  "value": {
+                    "example": 42
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "description": "Table chart result",
+                "properties": {
+                  "columns": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "rows": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "description": "Series chart result (line, bar, pie, etc.)",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "error": {
+            "type": "string",
+            "description": "Present instead of result when the chart query failed",
+            "example": "Failed to fetch chart data"
+          }
+        }
+      },
+      "Chat": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "contact_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "user_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "OPEN",
+              "CLOSED",
+              "WAITING",
+              "SNOOZED",
+              "REOPENED"
+            ],
+            "example": "OPEN"
+          },
+          "seen": {
+            "type": "boolean",
+            "example": false
+          },
+          "unread": {
+            "type": "boolean",
+            "example": true
+          },
+          "replied": {
+            "type": "boolean",
+            "example": false
+          },
+          "unseen_count": {
+            "type": "integer",
+            "example": 3
+          },
+          "last_message_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "last_response_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2024-01-15T09:00:00.000Z"
+          },
+          "last_status_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2024-01-15T10:30:00.000Z"
+          },
+          "first_response_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2024-01-14T08:00:00.000Z"
+          },
+          "channel_account_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "team_id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true,
+            "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8"
+          },
+          "closed_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": null,
+            "description": "Timestamp when the chat was closed"
+          },
+          "first_customer_message_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": null,
+            "description": "Timestamp of the first customer message in the chat"
+          },
+          "close_window_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "example": "2024-01-16T10:30:00.000Z",
+            "description": "Timestamp when the WhatsApp messaging window closes (24h after last customer message)"
+          }
+        }
+      },
+      "Dashboard": {
+        "type": "object",
+        "description": "Dashboard with full chart details",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Sales Dashboard"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "updated_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "charts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/ID"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Monthly Revenue"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "line",
+                    "area",
+                    "bar",
+                    "stackedBar",
+                    "table",
+                    "number",
+                    "kpiPanel",
+                    "pie",
+                    "donut",
+                    "funnel"
+                  ],
+                  "example": "bar"
+                },
+                "layout": {
+                  "type": "object",
+                  "description": "Chart position in the dashboard grid",
+                  "properties": {
+                    "x": {
+                      "type": "integer"
+                    },
+                    "y": {
+                      "type": "integer"
+                    },
+                    "w": {
+                      "type": "integer"
+                    },
+                    "h": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "DashboardSummary": {
+        "type": "object",
+        "description": "Dashboard summary for list endpoint",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Sales Dashboard"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "updated_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "charts_count": {
+            "type": "integer",
+            "example": 12,
+            "description": "Number of charts in the dashboard"
+          }
+        }
+      },
+      "MessageTemplate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "external_id": {
+            "type": "string",
+            "example": "123456789",
+            "description": "Template ID on Meta"
+          },
+          "name": {
+            "type": "string",
+            "example": "welcome_message",
+            "description": "Template name"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "APPROVED",
+              "PENDING",
+              "REJECTED"
+            ],
+            "example": "APPROVED",
+            "description": "Template approval status"
+          },
+          "language": {
+            "type": "string",
+            "example": "pt_BR",
+            "description": "Language code"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "MARKETING",
+              "UTILITY",
+              "AUTHENTICATION"
+            ],
+            "example": "MARKETING",
+            "description": "Template category"
+          },
+          "components": {
+            "type": "array",
+            "description": "Template components (HEADER, BODY, FOOTER, BUTTONS)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "HEADER",
+                    "BODY",
+                    "FOOTER",
+                    "BUTTONS"
+                  ],
+                  "example": "BODY"
+                },
+                "text": {
+                  "type": "string",
+                  "example": "Hello {{1}}, welcome!"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "TEXT"
+                }
+              }
+            }
+          },
+          "variables": {
+            "type": "object",
+            "nullable": true,
+            "description": "Variable mapping by component",
+            "example": {
+              "body": [
+                "{{1}}"
+              ]
+            }
+          }
+        }
+      },
+      "Message": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "created_at": {
+            "$ref": "#/components/schemas/DateTime"
+          },
+          "chat_id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true,
+            "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8"
+          },
+          "user_id": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true,
+            "example": "8feade82-d77b-4e8b-9d35-fd43e972b5c8"
+          },
+          "content": {
+            "type": "string",
+            "example": "Hello, how can I help you?"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "USER",
+              "CUSTOMER",
+              "EVENT",
+              "NOTE"
+            ],
+            "example": "USER"
+          },
+          "sent": {
+            "type": "boolean",
+            "example": true
+          },
+          "seen": {
+            "type": "boolean",
+            "example": false
+          },
+          "delivered": {
+            "type": "boolean",
+            "example": true
+          },
+          "content_type": {
+            "type": "string",
+            "example": "TEXT"
+          },
+          "content_url": {
+            "type": "string",
+            "nullable": true,
+            "example": "https://example.com/file.jpg"
+          },
+          "external_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "wamid.HBgNNTU0ODk..."
+          },
+          "content_object": {
+            "type": "object",
+            "nullable": true
+          },
+          "content_action": {
+            "type": "object",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "QUEUED",
+              "SENT",
+              "DELIVERED",
+              "READ"
+            ],
+            "example": "DELIVERED",
+            "description": "Derived from sent/delivered/seen flags"
+          },
+          "source": {
+            "type": "string",
+            "nullable": true,
+            "example": "API",
+            "description": "Origin of the message (e.g. API, CAMPAIGN, WEB)"
+          }
+        }
+      },
+      "ContactCreateSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Contact name"
+          },
+          "ddi": {
+            "type": "string",
+            "example": "+55"
+          },
+          "phone": {
+            "type": "string",
+            "example": "48999999999"
+          },
+          "email": {
+            "type": "string",
+            "example": "contact@email.com"
+          },
+          "username": {
+            "type": "string",
+            "example": "Instagram ID"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "properties": {
+              "organization": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "DealUpdateSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Contact name"
+          },
+          "phone": {
+            "type": "string",
+            "example": "48999999999"
+          },
+          "email": {
+            "type": "string",
+            "example": "contact@email.com"
+          },
+          "value": {
+            "type": "number",
+            "example": "200.5"
+          },
+          "stage_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DealStatus"
+          },
+          "user_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "origin_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "properties": {
+              "contact": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "organization": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "DealCreateSchema": {
+        "type": "object",
+        "properties": {
+          "origin_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Contact name"
+          },
+          "phone": {
+            "type": "string",
+            "example": "48999999999"
+          },
+          "email": {
+            "type": "string",
+            "example": "contact@email.com"
+          },
+          "username": {
+            "type": "string",
+            "example": "Instagram ID"
+          },
+          "value": {
+            "type": "number",
+            "example": "200.5"
+          },
+          "stage_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "user_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "contact_id": {
+            "$ref": "#/components/schemas/ID"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "properties": {
+              "contact": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "organization": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "origin_id"
+        ]
+      },
+      "OrganizationCreateSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Organization name"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "TagCreateSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Tag name"
+          },
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          }
+        },
+        "required": [
+          "name",
+          "color"
+        ]
+      }
+    }
+  }
+}

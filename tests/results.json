@@ -1,0 +1,6256 @@
+[
+  {
+    "prompt_id": "A_clint_account_fields_list_v1",
+    "persona": "A",
+    "target_tool": "clint_account_fields_list",
+    "variation": 1,
+    "prompt": "que campos eu tenho cadastrado na minha conta?",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_account_fields_list_v2",
+    "persona": "A",
+    "target_tool": "clint_account_fields_list",
+    "variation": 2,
+    "prompt": "me lista os campos personalizados aí",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_account_fields_list_v3",
+    "persona": "A",
+    "target_tool": "clint_account_fields_list",
+    "variation": 3,
+    "prompt": "quais info dá pra preencher no contato?",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_get_v1",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 1,
+    "prompt": "me mostra os detalhes daquele whatsapp que eu conectei",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_get_v2",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 2,
+    "prompt": "abre o canal do zap, quero ver",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_get_v3",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 3,
+    "prompt": "puxa info daquele número de whatsapp aí",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_list_v1",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 1,
+    "prompt": "quais zaps eu tenho ligado aqui?",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_list_v2",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 2,
+    "prompt": "lista meus números de whatsapp",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_channel_accounts_list_v3",
+    "persona": "A",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 3,
+    "prompt": "quantos canais de zap tô usando?",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_charts_data_get_v1",
+    "persona": "A",
+    "target_tool": "clint_charts_data_get",
+    "variation": 1,
+    "prompt": "me mostra os dados daquele gráfico",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_charts_data_get_v2",
+    "persona": "A",
+    "target_tool": "clint_charts_data_get",
+    "variation": 2,
+    "prompt": "puxa o gráfico de vendas aí",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_charts_data_get_v3",
+    "persona": "A",
+    "target_tool": "clint_charts_data_get",
+    "variation": 3,
+    "prompt": "que número tá dando naquele gráfico?",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_channel_account_list_v1",
+    "persona": "A",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 1,
+    "prompt": "todas as conversas do meu zap principal",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_channel_account_list_v2",
+    "persona": "A",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 2,
+    "prompt": "quem tá conversando comigo nesse número?",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_channel_account_list_v3",
+    "persona": "A",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 3,
+    "prompt": "lista os chats daquela linha lá",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_contact_list_v1",
+    "persona": "A",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 1,
+    "prompt": "todas as conversas que tive com a Marina",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_contact_list_v2",
+    "persona": "A",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 2,
+    "prompt": "me mostra o histórico de chat dessa lead",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_by_contact_list_v3",
+    "persona": "A",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 3,
+    "prompt": "quantas vezes ela já me chamou no zap?",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_get_v1",
+    "persona": "A",
+    "target_tool": "clint_chats_get",
+    "variation": 1,
+    "prompt": "abre essa conversa aí pra mim",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_get_v2",
+    "persona": "A",
+    "target_tool": "clint_chats_get",
+    "variation": 2,
+    "prompt": "me dá detalhe desse chat específico",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_chats_get_v3",
+    "persona": "A",
+    "target_tool": "clint_chats_get",
+    "variation": 3,
+    "prompt": "puxa essa conversa do zap",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_attachments_list_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 1,
+    "prompt": "que arquivo ela já mandou pra mim?",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_attachments_list_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 2,
+    "prompt": "tem comprovante anexado nessa lead?",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_attachments_list_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 3,
+    "prompt": "me mostra os anexos dessa pessoa",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_create_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_create",
+    "variation": 1,
+    "prompt": "cadastra a Jana aí, número 11 99999-8888",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Jana",
+      "phone": "11999998888"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_create_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_create",
+    "variation": 2,
+    "prompt": "adiciona um contato novo",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Novo Contato"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_create_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_create",
+    "variation": 3,
+    "prompt": "bota essa cliente nova no sistema",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "<contact_name>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_delete_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_delete",
+    "variation": 1,
+    "prompt": "apaga esse contato aí",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_delete_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_delete",
+    "variation": 2,
+    "prompt": "remove a Patrícia da minha lista",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_delete_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_delete",
+    "variation": 3,
+    "prompt": "deleta esse lead que tá errado",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_get_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_get",
+    "variation": 1,
+    "prompt": "me mostra a ficha da Carla aí",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_get_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_get",
+    "variation": 2,
+    "prompt": "abre os dados desse contato",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_get_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_get",
+    "variation": 3,
+    "prompt": "quem é essa pessoa? puxa info dela",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_list_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_list",
+    "variation": 1,
+    "prompt": "me mostra todos meus contatos aí",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_list_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_list",
+    "variation": 2,
+    "prompt": "quem entrou essa semana?",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_list_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_list",
+    "variation": 3,
+    "prompt": "lista minha base de leads",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_add_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 1,
+    "prompt": "marca essa daí como quente",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "extra param: tag_id"
+    ]
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_add_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 2,
+    "prompt": "coloca a tag de mentoria nela",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_add_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 3,
+    "prompt": "põe etiqueta de interessada nesse contato",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_remove_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 1,
+    "prompt": "tira a tag de fria dela, ela voltou a falar",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "fria"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_remove_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 2,
+    "prompt": "remove aquela etiqueta desse contato aí",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_tags_remove_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 3,
+    "prompt": "desmarca a tag dessa pessoa",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_update_v1",
+    "persona": "A",
+    "target_tool": "clint_contacts_update",
+    "variation": 1,
+    "prompt": "atualiza o email da Bruna pra novo arroba gmail",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "email": "bruna@gmail.com"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_update_v2",
+    "persona": "A",
+    "target_tool": "clint_contacts_update",
+    "variation": 2,
+    "prompt": "muda o telefone desse contato",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "phone": "<phone>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_contacts_update_v3",
+    "persona": "A",
+    "target_tool": "clint_contacts_update",
+    "variation": 3,
+    "prompt": "edita aí o nome dela tá errado",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "name": "<corrected_name>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_data_get_v1",
+    "persona": "A",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 1,
+    "prompt": "me dá um resumo daquele painel",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_data_get_v2",
+    "persona": "A",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 2,
+    "prompt": "puxa os números do dashboard aí",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_data_get_v3",
+    "persona": "A",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 3,
+    "prompt": "abre aquela tela de gráficos com os dados",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_get_v1",
+    "persona": "A",
+    "target_tool": "clint_dashboards_get",
+    "variation": 1,
+    "prompt": "abre aquele painel principal pra mim",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_get_v2",
+    "persona": "A",
+    "target_tool": "clint_dashboards_get",
+    "variation": 2,
+    "prompt": "me mostra a tela de relatórios",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_get_v3",
+    "persona": "A",
+    "target_tool": "clint_dashboards_get",
+    "variation": 3,
+    "prompt": "puxa esse dashboard aí",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_list_v1",
+    "persona": "A",
+    "target_tool": "clint_dashboards_list",
+    "variation": 1,
+    "prompt": "quais painéis eu tenho?",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_list_v2",
+    "persona": "A",
+    "target_tool": "clint_dashboards_list",
+    "variation": 2,
+    "prompt": "lista todos os dashboards aí",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_dashboards_list_v3",
+    "persona": "A",
+    "target_tool": "clint_dashboards_list",
+    "variation": 3,
+    "prompt": "me mostra as telas de gráficos que tenho",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_create_v1",
+    "persona": "A",
+    "target_tool": "clint_deals_create",
+    "variation": 1,
+    "prompt": "cria uma negociação nova pra Marina, mentoria 997",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>",
+      "name": "Marina",
+      "value": 997
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_create_v2",
+    "persona": "A",
+    "target_tool": "clint_deals_create",
+    "variation": 2,
+    "prompt": "abre uma oportunidade nova aí",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_create_v3",
+    "persona": "A",
+    "target_tool": "clint_deals_create",
+    "variation": 3,
+    "prompt": "bota essa lead no funil",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['origin_id']"
+    ]
+  },
+  {
+    "prompt_id": "A_clint_deals_delete_v1",
+    "persona": "A",
+    "target_tool": "clint_deals_delete",
+    "variation": 1,
+    "prompt": "apaga essa negociação aí",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_delete_v2",
+    "persona": "A",
+    "target_tool": "clint_deals_delete",
+    "variation": 2,
+    "prompt": "deleta esse deal duplicado",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_delete_v3",
+    "persona": "A",
+    "target_tool": "clint_deals_delete",
+    "variation": 3,
+    "prompt": "remove aquela oportunidade do funil",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_get_v1",
+    "persona": "A",
+    "target_tool": "clint_deals_get",
+    "variation": 1,
+    "prompt": "me mostra os detalhes dessa negociação",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_get_v2",
+    "persona": "A",
+    "target_tool": "clint_deals_get",
+    "variation": 2,
+    "prompt": "abre aquela venda da Pri pra eu ver",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_get_v3",
+    "persona": "A",
+    "target_tool": "clint_deals_get",
+    "variation": 3,
+    "prompt": "puxa info desse deal aí",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_list_v1",
+    "persona": "A",
+    "target_tool": "clint_deals_list",
+    "variation": 1,
+    "prompt": "quem tá no carrinho agora?",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_list_v2",
+    "persona": "A",
+    "target_tool": "clint_deals_list",
+    "variation": 2,
+    "prompt": "lista minhas vendas em aberto",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {
+      "status": "OPEN"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_list_v3",
+    "persona": "A",
+    "target_tool": "clint_deals_list",
+    "variation": 3,
+    "prompt": "me mostra o funil aí",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_update_v1",
+    "persona": "A",
+    "target_tool": "clint_deals_update",
+    "variation": 1,
+    "prompt": "marca essa negociação como ganha, deu venda",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "status": "WON"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_update_v2",
+    "persona": "A",
+    "target_tool": "clint_deals_update",
+    "variation": 2,
+    "prompt": "muda o valor daquele deal pra 1497",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "value": 1497
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_deals_update_v3",
+    "persona": "A",
+    "target_tool": "clint_deals_update",
+    "variation": 3,
+    "prompt": "atualiza a etapa dessa oportunidade",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "stage_id": "<stage_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_get_v1",
+    "persona": "A",
+    "target_tool": "clint_groups_get",
+    "variation": 1,
+    "prompt": "me mostra esse grupo aí",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_get_v2",
+    "persona": "A",
+    "target_tool": "clint_groups_get",
+    "variation": 2,
+    "prompt": "abre detalhes daquele grupo de alunas",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_get_v3",
+    "persona": "A",
+    "target_tool": "clint_groups_get",
+    "variation": 3,
+    "prompt": "puxa info desse grupo",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_list_v1",
+    "persona": "A",
+    "target_tool": "clint_groups_list",
+    "variation": 1,
+    "prompt": "quais grupos eu tenho?",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_list_v2",
+    "persona": "A",
+    "target_tool": "clint_groups_list",
+    "variation": 2,
+    "prompt": "lista todos meus grupos aí",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_groups_list_v3",
+    "persona": "A",
+    "target_tool": "clint_groups_list",
+    "variation": 3,
+    "prompt": "me mostra os grupos cadastrados",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_get_v1",
+    "persona": "A",
+    "target_tool": "clint_lost_status_get",
+    "variation": 1,
+    "prompt": "me mostra aquele motivo de perda específico",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_get_v2",
+    "persona": "A",
+    "target_tool": "clint_lost_status_get",
+    "variation": 2,
+    "prompt": "abre detalhe desse motivo de não venda",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_get_v3",
+    "persona": "A",
+    "target_tool": "clint_lost_status_get",
+    "variation": 3,
+    "prompt": "puxa esse status de perdido aí",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_list_v1",
+    "persona": "A",
+    "target_tool": "clint_lost_status_list",
+    "variation": 1,
+    "prompt": "quais motivos de perda eu tenho cadastrado?",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_list_v2",
+    "persona": "A",
+    "target_tool": "clint_lost_status_list",
+    "variation": 2,
+    "prompt": "lista os motivos de não fechei",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_lost_status_list_v3",
+    "persona": "A",
+    "target_tool": "clint_lost_status_list",
+    "variation": 3,
+    "prompt": "me mostra os motivos pra perder venda",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_get_v1",
+    "persona": "A",
+    "target_tool": "clint_message_templates_get",
+    "variation": 1,
+    "prompt": "abre aquele template de boas vindas",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_get_v2",
+    "persona": "A",
+    "target_tool": "clint_message_templates_get",
+    "variation": 2,
+    "prompt": "me mostra esse modelo de mensagem",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_get_v3",
+    "persona": "A",
+    "target_tool": "clint_message_templates_get",
+    "variation": 3,
+    "prompt": "puxa o template do zap aí",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_list_v1",
+    "persona": "A",
+    "target_tool": "clint_message_templates_list",
+    "variation": 1,
+    "prompt": "quais modelos de mensagem eu tenho?",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_list_v2",
+    "persona": "A",
+    "target_tool": "clint_message_templates_list",
+    "variation": 2,
+    "prompt": "lista meus templates do zap aprovados",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_message_templates_list_v3",
+    "persona": "A",
+    "target_tool": "clint_message_templates_list",
+    "variation": 3,
+    "prompt": "me mostra os textos prontos que tenho",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_audio_send_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 1,
+    "prompt": "manda esse áudio pra ela aí",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "audio_url": "<audio_url>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'url']",
+      "extra param: audio_url"
+    ]
+  },
+  {
+    "prompt_id": "A_clint_messages_audio_send_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 2,
+    "prompt": "dispara um áudio no zap pra Pri",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id_pri>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_audio_send_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 3,
+    "prompt": "envia esse mp3 de voz pra ela",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_by_chat_list_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 1,
+    "prompt": "me mostra as mensagens dessa conversa",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_by_chat_list_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 2,
+    "prompt": "o que a gente trocou nesse chat?",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_by_chat_list_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 3,
+    "prompt": "puxa o histórico de zap dessa conversa aí",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_document_send_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_document_send",
+    "variation": 1,
+    "prompt": "manda o pdf da mentoria pra ela",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "mentoria.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_document_send_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_document_send",
+    "variation": 2,
+    "prompt": "envia esse arquivo no zap",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "documento.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_document_send_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_document_send",
+    "variation": 3,
+    "prompt": "dispara o documento pra essa cliente",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "documento.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_get_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_get",
+    "variation": 1,
+    "prompt": "me mostra aquela mensagem específica",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_get_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_get",
+    "variation": 2,
+    "prompt": "abre detalhe desse zap que mandei",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_get_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_get",
+    "variation": 3,
+    "prompt": "puxa essa mensagem aí",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_image_send_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_image_send",
+    "variation": 1,
+    "prompt": "manda a foto do depoimento pra Marina",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id_marina>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_image_send_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_image_send",
+    "variation": 2,
+    "prompt": "envia essa imagem no zap aí",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_image_send_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_image_send",
+    "variation": 3,
+    "prompt": "dispara o print pra ela",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_template_send_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_template_send",
+    "variation": 1,
+    "prompt": "manda aquele template de boas vindas pra galera nova",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_template_send_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_template_send",
+    "variation": 2,
+    "prompt": "dispara o modelo pra essa lead aí",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_template_send_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_template_send",
+    "variation": 3,
+    "prompt": "envia o template pronto fora da janela de 24h",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_text_send_v1",
+    "persona": "A",
+    "target_tool": "clint_messages_text_send",
+    "variation": 1,
+    "prompt": "manda um zap pra Pri perguntando se ela viu",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Oi Pri, voce viu?"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_text_send_v2",
+    "persona": "A",
+    "target_tool": "clint_messages_text_send",
+    "variation": 2,
+    "prompt": "responde ela ali, fala que tô atrás dela",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Oi, to atras de voce"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_messages_text_send_v3",
+    "persona": "A",
+    "target_tool": "clint_messages_text_send",
+    "variation": 3,
+    "prompt": "dispara essa mensagem de texto pra cliente",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "text": "<message_text>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'message']",
+      "extra param: text"
+    ]
+  },
+  {
+    "prompt_id": "A_clint_organizations_get_v1",
+    "persona": "A",
+    "target_tool": "clint_organizations_get",
+    "variation": 1,
+    "prompt": "me mostra os dados daquela empresa",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_organizations_get_v2",
+    "persona": "A",
+    "target_tool": "clint_organizations_get",
+    "variation": 2,
+    "prompt": "abre essa organização pra eu ver",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_organizations_get_v3",
+    "persona": "A",
+    "target_tool": "clint_organizations_get",
+    "variation": 3,
+    "prompt": "puxa info dessa empresa aí",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_organizations_update_v1",
+    "persona": "A",
+    "target_tool": "clint_organizations_update",
+    "variation": 1,
+    "prompt": "muda o nome daquela empresa",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>",
+      "name": "<new_name>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_organizations_update_v2",
+    "persona": "A",
+    "target_tool": "clint_organizations_update",
+    "variation": 2,
+    "prompt": "atualiza os dados dessa organização",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_organizations_update_v3",
+    "persona": "A",
+    "target_tool": "clint_organizations_update",
+    "variation": 3,
+    "prompt": "edita aí a empresa, tá com info errada",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_get_v1",
+    "persona": "A",
+    "target_tool": "clint_origins_get",
+    "variation": 1,
+    "prompt": "me mostra aquela origem específica",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_get_v2",
+    "persona": "A",
+    "target_tool": "clint_origins_get",
+    "variation": 2,
+    "prompt": "abre detalhe dessa fonte de lead",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_get_v3",
+    "persona": "A",
+    "target_tool": "clint_origins_get",
+    "variation": 3,
+    "prompt": "puxa info desse canal de entrada aí",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_list_v1",
+    "persona": "A",
+    "target_tool": "clint_origins_list",
+    "variation": 1,
+    "prompt": "de onde tá vindo minhas leads?",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_list_v2",
+    "persona": "A",
+    "target_tool": "clint_origins_list",
+    "variation": 2,
+    "prompt": "lista as origens cadastradas",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_origins_list_v3",
+    "persona": "A",
+    "target_tool": "clint_origins_list",
+    "variation": 3,
+    "prompt": "me mostra os canais de entrada",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_create_v1",
+    "persona": "A",
+    "target_tool": "clint_tags_create",
+    "variation": 1,
+    "prompt": "cria uma tag de quente aí",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "quente",
+      "color": "#f44336"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_create_v2",
+    "persona": "A",
+    "target_tool": "clint_tags_create",
+    "variation": 2,
+    "prompt": "adiciona uma etiqueta nova chamada vip",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "vip",
+      "color": "#faa200"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_create_v3",
+    "persona": "A",
+    "target_tool": "clint_tags_create",
+    "variation": 3,
+    "prompt": "bota uma tag nova pra mentoria",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "mentoria",
+      "color": "#2196f3"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_delete_v1",
+    "persona": "A",
+    "target_tool": "clint_tags_delete",
+    "variation": 1,
+    "prompt": "apaga aquela tag que não uso mais",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_delete_v2",
+    "persona": "A",
+    "target_tool": "clint_tags_delete",
+    "variation": 2,
+    "prompt": "remove essa etiqueta velha aí",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_delete_v3",
+    "persona": "A",
+    "target_tool": "clint_tags_delete",
+    "variation": 3,
+    "prompt": "deleta a tag de teste",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_get_v1",
+    "persona": "A",
+    "target_tool": "clint_tags_get",
+    "variation": 1,
+    "prompt": "me mostra essa tag aí",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_get_v2",
+    "persona": "A",
+    "target_tool": "clint_tags_get",
+    "variation": 2,
+    "prompt": "abre detalhe daquela etiqueta",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_get_v3",
+    "persona": "A",
+    "target_tool": "clint_tags_get",
+    "variation": 3,
+    "prompt": "puxa info dessa tag específica",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_list_v1",
+    "persona": "A",
+    "target_tool": "clint_tags_list",
+    "variation": 1,
+    "prompt": "quais tags eu tenho criadas?",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_list_v2",
+    "persona": "A",
+    "target_tool": "clint_tags_list",
+    "variation": 2,
+    "prompt": "lista minhas etiquetas aí",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_tags_list_v3",
+    "persona": "A",
+    "target_tool": "clint_tags_list",
+    "variation": 3,
+    "prompt": "me mostra todas as tags",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_get_v1",
+    "persona": "A",
+    "target_tool": "clint_users_get",
+    "variation": 1,
+    "prompt": "me mostra dados desse usuário aí",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_get_v2",
+    "persona": "A",
+    "target_tool": "clint_users_get",
+    "variation": 2,
+    "prompt": "abre a ficha dessa pessoa da minha equipe",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_get_v3",
+    "persona": "A",
+    "target_tool": "clint_users_get",
+    "variation": 3,
+    "prompt": "puxa info dessa usuária",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_list_v1",
+    "persona": "A",
+    "target_tool": "clint_users_list",
+    "variation": 1,
+    "prompt": "quem tá usando a conta comigo?",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_list_v2",
+    "persona": "A",
+    "target_tool": "clint_users_list",
+    "variation": 2,
+    "prompt": "lista o pessoal da minha equipe aí",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "A_clint_users_list_v3",
+    "persona": "A",
+    "target_tool": "clint_users_list",
+    "variation": 3,
+    "prompt": "me mostra os usuários do clint",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_account_fields_list_v1",
+    "persona": "B",
+    "target_tool": "clint_account_fields_list",
+    "variation": 1,
+    "prompt": "quais campos customizados a gente tem cadastrado na conta?",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_account_fields_list_v2",
+    "persona": "B",
+    "target_tool": "clint_account_fields_list",
+    "variation": 2,
+    "prompt": "lista pra mim os campos personalizados que o time configurou aqui",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_account_fields_list_v3",
+    "persona": "B",
+    "target_tool": "clint_account_fields_list",
+    "variation": 3,
+    "prompt": "preciso ver os campos extras dos contatos pra montar um filtro",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_get_v1",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 1,
+    "prompt": "puxa os detalhes daquele número de WhatsApp oficial ID abc-123",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_get_v2",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 2,
+    "prompt": "me mostra o status do canal do zap comercial",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_get_v3",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 3,
+    "prompt": "qual a situação daquela linha de WhatsApp oficial que usei pra disparo?",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_list_v1",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 1,
+    "prompt": "quais números de WhatsApp oficial a gente tem ativos?",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_list_v2",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 2,
+    "prompt": "lista todos os canais de zap conectados na conta",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_channel_accounts_list_v3",
+    "persona": "B",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 3,
+    "prompt": "quantas linhas de WhatsApp oficial a gente tá usando pro time de vendas?",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_charts_data_get_v1",
+    "persona": "B",
+    "target_tool": "clint_charts_data_get",
+    "variation": 1,
+    "prompt": "roda aquele gráfico de conversão por etapa que tem no relatório",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_charts_data_get_v2",
+    "persona": "B",
+    "target_tool": "clint_charts_data_get",
+    "variation": 2,
+    "prompt": "puxa os dados do gráfico de leads por origem dessa semana",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_charts_data_get_v3",
+    "persona": "B",
+    "target_tool": "clint_charts_data_get",
+    "variation": 3,
+    "prompt": "executa esse chart aqui pra eu ver os números atualizados",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_channel_account_list_v1",
+    "persona": "B",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 1,
+    "prompt": "quais conversas tão rolando no zap comercial agora?",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_channel_account_list_v2",
+    "persona": "B",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 2,
+    "prompt": "lista os chats abertos naquela linha de WhatsApp do SDR",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_channel_account_list_v3",
+    "persona": "B",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 3,
+    "prompt": "me mostra todas as conversas ativas no número oficial",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_contact_list_v1",
+    "persona": "B",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 1,
+    "prompt": "puxa o histórico de conversas que tive com o lead Marcos Silva",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_contact_list_v2",
+    "persona": "B",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 2,
+    "prompt": "quais chats existem com esse contato aí?",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_by_contact_list_v3",
+    "persona": "B",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 3,
+    "prompt": "mostra todas as conversas que aquele lead teve com a gente",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_get_v1",
+    "persona": "B",
+    "target_tool": "clint_chats_get",
+    "variation": 1,
+    "prompt": "abre aquela conversa específica ID xyz pra eu dar uma olhada",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_get_v2",
+    "persona": "B",
+    "target_tool": "clint_chats_get",
+    "variation": 2,
+    "prompt": "me traz os detalhes desse chat aqui",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_chats_get_v3",
+    "persona": "B",
+    "target_tool": "clint_chats_get",
+    "variation": 3,
+    "prompt": "puxa info dessa conversa do zap que tá pendente",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_attachments_list_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 1,
+    "prompt": "quais documentos a gente tem anexado nesse lead?",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_attachments_list_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 2,
+    "prompt": "lista os arquivos que tão na ficha desse contato",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_attachments_list_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 3,
+    "prompt": "preciso ver o contrato que subi naquele cliente",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_create_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_create",
+    "variation": 1,
+    "prompt": "cadastra novo lead: Pedro Almeida, 11999998888, veio do Instagram",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Pedro Almeida",
+      "ddi": "+55",
+      "phone": "11999998888",
+      "fields": {
+        "origem": "Instagram"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_create_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_create",
+    "variation": 2,
+    "prompt": "adiciona aí esse contato que pegou na call agora",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "<contact_name>",
+      "phone": "<contact_phone>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_create_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_create",
+    "variation": 3,
+    "prompt": "cria um lead novo no CRM com esses dados que te mando",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Novo Lead"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_delete_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_delete",
+    "variation": 1,
+    "prompt": "apaga aquele contato duplicado ali",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_delete_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_delete",
+    "variation": 2,
+    "prompt": "remove esse lead da base, é spam",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_delete_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_delete",
+    "variation": 3,
+    "prompt": "deleta o contato ID 555 da nossa base",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_get_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_get",
+    "variation": 1,
+    "prompt": "abre a ficha completa daquele lead que liguei segunda passada",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_get_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_get",
+    "variation": 2,
+    "prompt": "me passa os dados do contato ID 1234",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_get_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_get",
+    "variation": 3,
+    "prompt": "puxa tudo que tem cadastrado nesse lead aqui",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_list_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_list",
+    "variation": 1,
+    "prompt": "lista os contatos qualificados dessa semana",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_list_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_list",
+    "variation": 2,
+    "prompt": "quantos leads entraram nos últimos 7 dias?",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_list_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_list",
+    "variation": 3,
+    "prompt": "me traz a lista geral de contatos da base",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_add_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 1,
+    "prompt": "marca esse lead como quente",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_add_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 2,
+    "prompt": "põe a tag de origem Instagram nesse contato",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_add_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 3,
+    "prompt": "adiciona tag de follow-up D+1 no lead",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_remove_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 1,
+    "prompt": "tira a tag de lead frio desse contato, ele esquentou",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "lead frio"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_remove_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 2,
+    "prompt": "remove aquela tag de no-show do lead, ele apareceu na call",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "no-show"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_tags_remove_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 3,
+    "prompt": "desmarca a tag MQL desse contato",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "MQL"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_update_v1",
+    "persona": "B",
+    "target_tool": "clint_contacts_update",
+    "variation": 1,
+    "prompt": "atualiza o telefone desse lead, ele me passou um novo",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "phone": "<new_phone>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_update_v2",
+    "persona": "B",
+    "target_tool": "clint_contacts_update",
+    "variation": 2,
+    "prompt": "corrige o email do contato pra esse novo aqui",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "email": "<new_email>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_contacts_update_v3",
+    "persona": "B",
+    "target_tool": "clint_contacts_update",
+    "variation": 3,
+    "prompt": "edita a ficha do lead pra atualizar empresa e cargo",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_data_get_v1",
+    "persona": "B",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 1,
+    "prompt": "roda os números do dashboard de vendas dessa semana",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_data_get_v2",
+    "persona": "B",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 2,
+    "prompt": "puxa os dados do painel de pipeline pra eu ver",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_data_get_v3",
+    "persona": "B",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 3,
+    "prompt": "executa os gráficos do dash de conversão",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_get_v1",
+    "persona": "B",
+    "target_tool": "clint_dashboards_get",
+    "variation": 1,
+    "prompt": "me mostra o que tem dentro daquele dashboard de fechamento",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_get_v2",
+    "persona": "B",
+    "target_tool": "clint_dashboards_get",
+    "variation": 2,
+    "prompt": "abre o painel ID 42 com a lista de gráficos",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_get_v3",
+    "persona": "B",
+    "target_tool": "clint_dashboards_get",
+    "variation": 3,
+    "prompt": "quais charts tão configurados naquele dash do time?",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_list_v1",
+    "persona": "B",
+    "target_tool": "clint_dashboards_list",
+    "variation": 1,
+    "prompt": "quais dashboards a gente tem aqui no CRM?",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_list_v2",
+    "persona": "B",
+    "target_tool": "clint_dashboards_list",
+    "variation": 2,
+    "prompt": "lista os painéis disponíveis pro time de vendas",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_dashboards_list_v3",
+    "persona": "B",
+    "target_tool": "clint_dashboards_list",
+    "variation": 3,
+    "prompt": "me mostra todos os dashboards montados",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_create_v1",
+    "persona": "B",
+    "target_tool": "clint_deals_create",
+    "variation": 1,
+    "prompt": "cria um deal novo pra esse lead, ticket 3500 no curso premium",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>",
+      "value": 3500,
+      "name": "curso premium"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_create_v2",
+    "persona": "B",
+    "target_tool": "clint_deals_create",
+    "variation": 2,
+    "prompt": "abre uma negociação no funil pra esse contato aí",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_create_v3",
+    "persona": "B",
+    "target_tool": "clint_deals_create",
+    "variation": 3,
+    "prompt": "registra um deal de R$ 2.500 pro Pedro na etapa de qualificação",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_delete_v1",
+    "persona": "B",
+    "target_tool": "clint_deals_delete",
+    "variation": 1,
+    "prompt": "apaga aquele deal duplicado que abri sem querer",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_delete_v2",
+    "persona": "B",
+    "target_tool": "clint_deals_delete",
+    "variation": 2,
+    "prompt": "remove a negociação ID 789, tava errada",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_delete_v3",
+    "persona": "B",
+    "target_tool": "clint_deals_delete",
+    "variation": 3,
+    "prompt": "deleta esse deal do pipeline, foi teste",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_get_v1",
+    "persona": "B",
+    "target_tool": "clint_deals_get",
+    "variation": 1,
+    "prompt": "abre o deal do João, quero ver em que etapa tá",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_get_v2",
+    "persona": "B",
+    "target_tool": "clint_deals_get",
+    "variation": 2,
+    "prompt": "puxa os detalhes daquela negociação ID 321",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_get_v3",
+    "persona": "B",
+    "target_tool": "clint_deals_get",
+    "variation": 3,
+    "prompt": "me mostra a ficha completa desse deal aberto",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_list_v1",
+    "persona": "B",
+    "target_tool": "clint_deals_list",
+    "variation": 1,
+    "prompt": "quais deals tão na etapa de fechamento agora?",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {
+      "stage_id": "<stage_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_list_v2",
+    "persona": "B",
+    "target_tool": "clint_deals_list",
+    "variation": 2,
+    "prompt": "lista todas as negociações abertas no pipeline",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_list_v3",
+    "persona": "B",
+    "target_tool": "clint_deals_list",
+    "variation": 3,
+    "prompt": "me traz os deals que ganhamos essa semana",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {
+      "status": "WON",
+      "won_at_start": "2026-05-11T00:00:00.000000+00:00",
+      "won_at_end": "2026-05-17T23:59:59.000000+00:00"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_update_v1",
+    "persona": "B",
+    "target_tool": "clint_deals_update",
+    "variation": 1,
+    "prompt": "move esse deal pra etapa de proposta enviada",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "stage_id": "<stage_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_update_v2",
+    "persona": "B",
+    "target_tool": "clint_deals_update",
+    "variation": 2,
+    "prompt": "marca aquela negociação como ganha, fechou hoje",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "status": "won"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_deals_update_v3",
+    "persona": "B",
+    "target_tool": "clint_deals_update",
+    "variation": 3,
+    "prompt": "atualiza o valor desse deal pra 4500, ele subiu pro premium",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "value": 4500
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_get_v1",
+    "persona": "B",
+    "target_tool": "clint_groups_get",
+    "variation": 1,
+    "prompt": "me mostra os detalhes daquele grupo de vendedores",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_get_v2",
+    "persona": "B",
+    "target_tool": "clint_groups_get",
+    "variation": 2,
+    "prompt": "puxa info do grupo ID 12",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_get_v3",
+    "persona": "B",
+    "target_tool": "clint_groups_get",
+    "variation": 3,
+    "prompt": "quem tá no grupo do time de closer?",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_list_v1",
+    "persona": "B",
+    "target_tool": "clint_groups_list",
+    "variation": 1,
+    "prompt": "quais grupos de usuário a gente tem montados?",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_list_v2",
+    "persona": "B",
+    "target_tool": "clint_groups_list",
+    "variation": 2,
+    "prompt": "lista todos os grupos cadastrados no CRM",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_groups_list_v3",
+    "persona": "B",
+    "target_tool": "clint_groups_list",
+    "variation": 3,
+    "prompt": "me traz a relação de grupos do time",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_get_v1",
+    "persona": "B",
+    "target_tool": "clint_lost_status_get",
+    "variation": 1,
+    "prompt": "me detalha aquele motivo de perda ID 5",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_get_v2",
+    "persona": "B",
+    "target_tool": "clint_lost_status_get",
+    "variation": 2,
+    "prompt": "puxa info daquele lost reason específico",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_get_v3",
+    "persona": "B",
+    "target_tool": "clint_lost_status_get",
+    "variation": 3,
+    "prompt": "qual a descrição daquela razão de deal perdido?",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_list_v1",
+    "persona": "B",
+    "target_tool": "clint_lost_status_list",
+    "variation": 1,
+    "prompt": "quais motivos de perda a gente cadastrou aqui?",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_list_v2",
+    "persona": "B",
+    "target_tool": "clint_lost_status_list",
+    "variation": 2,
+    "prompt": "lista os lost reasons disponíveis pra marcar nos deals",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_lost_status_list_v3",
+    "persona": "B",
+    "target_tool": "clint_lost_status_list",
+    "variation": 3,
+    "prompt": "me mostra todas as razões de perda configuradas",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_get_v1",
+    "persona": "B",
+    "target_tool": "clint_message_templates_get",
+    "variation": 1,
+    "prompt": "puxa aquele template de follow-up D+1 pra eu conferir o texto",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_get_v2",
+    "persona": "B",
+    "target_tool": "clint_message_templates_get",
+    "variation": 2,
+    "prompt": "me mostra o modelo de mensagem ID 88",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_get_v3",
+    "persona": "B",
+    "target_tool": "clint_message_templates_get",
+    "variation": 3,
+    "prompt": "abre aquele template aprovado pelo Meta de quebra de objeção",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_list_v1",
+    "persona": "B",
+    "target_tool": "clint_message_templates_list",
+    "variation": 1,
+    "prompt": "quais templates aprovados a gente tem pra disparar no zap?",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_list_v2",
+    "persona": "B",
+    "target_tool": "clint_message_templates_list",
+    "variation": 2,
+    "prompt": "lista os modelos de mensagem do nosso número oficial",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_message_templates_list_v3",
+    "persona": "B",
+    "target_tool": "clint_message_templates_list",
+    "variation": 3,
+    "prompt": "me traz os templates disponíveis pra cadência fora da janela de 24h",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_audio_send_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 1,
+    "prompt": "manda esse áudio pro lead no zap",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_audio_send_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 2,
+    "prompt": "dispara aquele voice de quebra de objeção pro contato",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_audio_send_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 3,
+    "prompt": "envia o áudio do follow-up pra esse cliente aí",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_by_chat_list_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 1,
+    "prompt": "puxa o histórico de mensagens dessa conversa",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_by_chat_list_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 2,
+    "prompt": "lista todas as mensagens trocadas nesse chat aí",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_by_chat_list_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 3,
+    "prompt": "me mostra o que foi falado nessa conversa do zap",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_document_send_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_document_send",
+    "variation": 1,
+    "prompt": "manda o PDF da proposta pro lead no WhatsApp",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "proposta.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_document_send_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_document_send",
+    "variation": 2,
+    "prompt": "envia o contrato em PDF pro contato",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "document_url": "<document_url>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'filename', 'url']",
+      "extra param: document_url"
+    ]
+  },
+  {
+    "prompt_id": "B_clint_messages_document_send_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_document_send",
+    "variation": 3,
+    "prompt": "dispara aquele arquivo de boleto pro cliente",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "boleto.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_get_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_get",
+    "variation": 1,
+    "prompt": "puxa aquela mensagem específica ID 999 pra eu ver o status",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "999"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_get_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_get",
+    "variation": 2,
+    "prompt": "me mostra os detalhes da última mensagem enviada",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_get_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_get",
+    "variation": 3,
+    "prompt": "consulta info daquela msg que disparei agora",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_image_send_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_image_send",
+    "variation": 1,
+    "prompt": "manda aquela foto do depoimento pro lead",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_image_send_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_image_send",
+    "variation": 2,
+    "prompt": "envia a imagem da oferta pelo zap",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_image_send_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_image_send",
+    "variation": 3,
+    "prompt": "dispara o print do resultado do aluno pro contato",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "image_url": "<image_url>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'url']",
+      "extra param: image_url"
+    ]
+  },
+  {
+    "prompt_id": "B_clint_messages_template_send_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_template_send",
+    "variation": 1,
+    "prompt": "dispara o template de follow-up D+1 pra esse lead que esfriou",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_template_send_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_template_send",
+    "variation": 2,
+    "prompt": "envia aquele modelo aprovado pelo Meta pro contato fora da janela",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_template_send_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_template_send",
+    "variation": 3,
+    "prompt": "manda o HSM de reengajamento pro lead frio",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_text_send_v1",
+    "persona": "B",
+    "target_tool": "clint_messages_text_send",
+    "variation": 1,
+    "prompt": "manda um zap pro lead falando que tô confirmando a call de amanhã",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Confirmando nossa call de amanhã"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_text_send_v2",
+    "persona": "B",
+    "target_tool": "clint_messages_text_send",
+    "variation": 2,
+    "prompt": "responde esse contato no WhatsApp com 'já te ligo'",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "já te ligo"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_messages_text_send_v3",
+    "persona": "B",
+    "target_tool": "clint_messages_text_send",
+    "variation": 3,
+    "prompt": "dispara mensagem de texto pro Pedro confirmando o pagamento",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Pedro, confirmando o pagamento."
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_get_v1",
+    "persona": "B",
+    "target_tool": "clint_organizations_get",
+    "variation": 1,
+    "prompt": "abre os dados daquela empresa cadastrada ID 50",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_get_v2",
+    "persona": "B",
+    "target_tool": "clint_organizations_get",
+    "variation": 2,
+    "prompt": "me mostra a ficha da empresa do lead",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_get_v3",
+    "persona": "B",
+    "target_tool": "clint_organizations_get",
+    "variation": 3,
+    "prompt": "puxa info da organização vinculada nesse deal",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_update_v1",
+    "persona": "B",
+    "target_tool": "clint_organizations_update",
+    "variation": 1,
+    "prompt": "atualiza o CNPJ daquela empresa, o lead me passou agora",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>",
+      "fields": {
+        "cnpj": "<cnpj>"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_update_v2",
+    "persona": "B",
+    "target_tool": "clint_organizations_update",
+    "variation": 2,
+    "prompt": "edita o nome da organização pro nome fantasia correto",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>",
+      "name": "<nome_fantasia>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_organizations_update_v3",
+    "persona": "B",
+    "target_tool": "clint_organizations_update",
+    "variation": 3,
+    "prompt": "corrige o segmento da empresa ID 77 pra educação",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>",
+      "fields": {
+        "segmento": "educação"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_get_v1",
+    "persona": "B",
+    "target_tool": "clint_origins_get",
+    "variation": 1,
+    "prompt": "me mostra os detalhes daquela origem ID 3",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "3"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_get_v2",
+    "persona": "B",
+    "target_tool": "clint_origins_get",
+    "variation": 2,
+    "prompt": "puxa info daquela origem de tráfego específica",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_get_v3",
+    "persona": "B",
+    "target_tool": "clint_origins_get",
+    "variation": 3,
+    "prompt": "qual a descrição da origem 'webinar' no CRM?",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_list_v1",
+    "persona": "B",
+    "target_tool": "clint_origins_list",
+    "variation": 1,
+    "prompt": "quais origens de lead a gente tem cadastradas?",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_list_v2",
+    "persona": "B",
+    "target_tool": "clint_origins_list",
+    "variation": 2,
+    "prompt": "lista todas as fontes de tráfego configuradas",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_origins_list_v3",
+    "persona": "B",
+    "target_tool": "clint_origins_list",
+    "variation": 3,
+    "prompt": "me traz a relação de origens pra eu marcar nos leads",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_create_v1",
+    "persona": "B",
+    "target_tool": "clint_tags_create",
+    "variation": 1,
+    "prompt": "cria uma tag nova chamada 'lead quente'",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "lead quente",
+      "color": "#f44336"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_create_v2",
+    "persona": "B",
+    "target_tool": "clint_tags_create",
+    "variation": 2,
+    "prompt": "adiciona uma tag de 'no-show' no sistema",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "no-show",
+      "color": "#f44336"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_create_v3",
+    "persona": "B",
+    "target_tool": "clint_tags_create",
+    "variation": 3,
+    "prompt": "cria a tag 'webinar-jun' pra eu marcar a galera",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "webinar-jun"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['color']"
+    ]
+  },
+  {
+    "prompt_id": "B_clint_tags_delete_v1",
+    "persona": "B",
+    "target_tool": "clint_tags_delete",
+    "variation": 1,
+    "prompt": "apaga aquela tag antiga que ninguém usa mais",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_delete_v2",
+    "persona": "B",
+    "target_tool": "clint_tags_delete",
+    "variation": 2,
+    "prompt": "remove a tag ID 22 do CRM",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_delete_v3",
+    "persona": "B",
+    "target_tool": "clint_tags_delete",
+    "variation": 3,
+    "prompt": "deleta a tag de campanha que já acabou",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_get_v1",
+    "persona": "B",
+    "target_tool": "clint_tags_get",
+    "variation": 1,
+    "prompt": "abre os detalhes daquela tag de origem ID 15",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_get_v2",
+    "persona": "B",
+    "target_tool": "clint_tags_get",
+    "variation": 2,
+    "prompt": "me mostra info daquela tag específica",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_get_v3",
+    "persona": "B",
+    "target_tool": "clint_tags_get",
+    "variation": 3,
+    "prompt": "puxa os dados da tag 'mql'",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_list_v1",
+    "persona": "B",
+    "target_tool": "clint_tags_list",
+    "variation": 1,
+    "prompt": "quais tags a gente tem cadastradas no CRM?",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_list_v2",
+    "persona": "B",
+    "target_tool": "clint_tags_list",
+    "variation": 2,
+    "prompt": "lista todas as tags disponíveis pra marcar lead",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_tags_list_v3",
+    "persona": "B",
+    "target_tool": "clint_tags_list",
+    "variation": 3,
+    "prompt": "me mostra a lista de tags que o time criou",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_get_v1",
+    "persona": "B",
+    "target_tool": "clint_users_get",
+    "variation": 1,
+    "prompt": "puxa o perfil daquele vendedor ID 8",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "8"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_get_v2",
+    "persona": "B",
+    "target_tool": "clint_users_get",
+    "variation": 2,
+    "prompt": "me mostra os dados do usuário Felipe no CRM",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_get_v3",
+    "persona": "B",
+    "target_tool": "clint_users_get",
+    "variation": 3,
+    "prompt": "abre a ficha daquele SDR específico",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_list_v1",
+    "persona": "B",
+    "target_tool": "clint_users_list",
+    "variation": 1,
+    "prompt": "quem são os vendedores ativos no CRM?",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_list_v2",
+    "persona": "B",
+    "target_tool": "clint_users_list",
+    "variation": 2,
+    "prompt": "lista todos os usuários do time",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "B_clint_users_list_v3",
+    "persona": "B",
+    "target_tool": "clint_users_list",
+    "variation": 3,
+    "prompt": "me traz a relação de SDRs e closers cadastrados",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_account_fields_list_v1",
+    "persona": "C",
+    "target_tool": "clint_account_fields_list",
+    "variation": 1,
+    "prompt": "preciso mapear todos os custom fields do account pra montar o data dictionary do nosso dashboard de attribution",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_account_fields_list_v2",
+    "persona": "C",
+    "target_tool": "clint_account_fields_list",
+    "variation": 2,
+    "prompt": "lista os campos disponíveis no schema da conta — quero auditar quais estão sendo populados pra cohort 2025-Q1",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_account_fields_list_v3",
+    "persona": "C",
+    "target_tool": "clint_account_fields_list",
+    "variation": 3,
+    "prompt": "me dá o inventory completo de fields configurados, vou cruzar com o spec do BI antes do review semanal",
+    "candidate_tool": "clint_account_fields_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_get_v1",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 1,
+    "prompt": "puxa o detalhe do channel account ID 8821 — quero validar quality rating e status do WABA antes do blast de Q4",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_get_v2",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 2,
+    "prompt": "preciso do payload completo da conta WhatsApp Official wba-prod-002 pra confirmar tier de messaging limit",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_get_v3",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_get",
+    "variation": 3,
+    "prompt": "abre o channel account 5532 — quero ver throughput, phone number quality e display name aprovado pela Meta",
+    "candidate_tool": "clint_channel_accounts_get",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_list_v1",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 1,
+    "prompt": "me lista todos os WABAs ativos — preciso bater com a allocation de SDRs por número antes do forecast de Q4 2025",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_list_v2",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 2,
+    "prompt": "quais canais WhatsApp Official estão provisionados na conta? tô avaliando throughput total YoY vs Q4 2024",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_channel_accounts_list_v3",
+    "persona": "C",
+    "target_tool": "clint_channel_accounts_list",
+    "variation": 3,
+    "prompt": "rola os channel accounts ativos paginando tudo — vou consolidar capacity planning de outbound MoM",
+    "candidate_tool": "clint_channel_accounts_list",
+    "candidate_params": {
+      "page": 1
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_charts_data_get_v1",
+    "persona": "C",
+    "target_tool": "clint_charts_data_get",
+    "variation": 1,
+    "prompt": "executa o chart 4471 — quero o data set bruto pra comparar weighted pipeline last 30d vs prior period",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "4471"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_charts_data_get_v2",
+    "persona": "C",
+    "target_tool": "clint_charts_data_get",
+    "variation": 2,
+    "prompt": "preciso do payload do chart de stage velocity ID chart_velocity_q4 pra plotar contra forecast no Looker",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_charts_data_get_v3",
+    "persona": "C",
+    "target_tool": "clint_charts_data_get",
+    "variation": 3,
+    "prompt": "roda o chart 9912 de win rate por rep e me devolve o dataset cru — vou montar a leaderboard YTD",
+    "candidate_tool": "clint_charts_data_get",
+    "candidate_params": {
+      "chart_id": "<chart_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_channel_account_list_v1",
+    "persona": "C",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 1,
+    "prompt": "puxa todos os chats do WABA principal ordenados por last_message_at — quero medir response SLA por número last 7d",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_channel_account_list_v2",
+    "persona": "C",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 2,
+    "prompt": "lista as conversas vinculadas ao channel account wba-sdr-01, preciso da volumetria de inbound pra calcular cost per chat MoM",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_channel_account_list_v3",
+    "persona": "C",
+    "target_tool": "clint_chats_by_channel_account_list",
+    "variation": 3,
+    "prompt": "me dá o pool de chats abertos no número 5511999990001 — vou cruzar com SDR allocation pra balancear workload",
+    "candidate_tool": "clint_chats_by_channel_account_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_contact_list_v1",
+    "persona": "C",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 1,
+    "prompt": "abre todas as threads do contato 88412 — quero auditar touchpoints antes do QBR com esse account",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_contact_list_v2",
+    "persona": "C",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 2,
+    "prompt": "lista o histórico de chats do lead contact_id=72340 pra eu mapear journey multi-channel attribution",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_by_contact_list_v3",
+    "persona": "C",
+    "target_tool": "clint_chats_by_contact_list",
+    "variation": 3,
+    "prompt": "preciso do timeline de conversas do contato Renato Bittencourt ID 55129 — review de deal slippage",
+    "candidate_tool": "clint_chats_by_contact_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_get_v1",
+    "persona": "C",
+    "target_tool": "clint_chats_get",
+    "variation": 1,
+    "prompt": "abre o chat 99182 pra eu validar contexto antes da escalation pra Customer Success",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_get_v2",
+    "persona": "C",
+    "target_tool": "clint_chats_get",
+    "variation": 2,
+    "prompt": "puxa o detalhe da thread chat_id=44021 — preciso revisar antes do 1:1 com o rep responsável",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_chats_get_v3",
+    "persona": "C",
+    "target_tool": "clint_chats_get",
+    "variation": 3,
+    "prompt": "me dá o payload completo do chat 71203 — vou usar como case study no performance review semanal",
+    "candidate_tool": "clint_chats_get",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_attachments_list_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 1,
+    "prompt": "lista os attachments do contato 33421 — quero auditar se o contrato e o pitch deck foram anexados antes do close",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_attachments_list_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 2,
+    "prompt": "preciso de todos os documentos do lead contact_id=88129 pra DD do enterprise deal",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_attachments_list_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_attachments_list",
+    "variation": 3,
+    "prompt": "puxa os arquivos vinculados ao contato 12211 — preciso confirmar NDA assinado antes de avançar stage",
+    "candidate_tool": "clint_contacts_attachments_list",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_create_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_create",
+    "variation": 1,
+    "prompt": "cria um novo contato — Carolina Setúbal, CFO da Bridge Capital, origin LinkedIn outbound, cohort 2025-Q2",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Carolina Setúbal",
+      "fields": {
+        "cargo": "CFO",
+        "empresa": "Bridge Capital",
+        "origin": "LinkedIn outbound",
+        "cohort": "2025-Q2"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_create_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_create",
+    "variation": 2,
+    "prompt": "insere lead novo no CRM: Marcos Tanaka, Head of Ops, vindo do webinar de outubro, channel attribution paid social",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Marcos Tanaka"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_create_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_create",
+    "variation": 3,
+    "prompt": "registra o contato Bianca Werneck, CRO target, tagueando como ICP enterprise high-ticket",
+    "candidate_tool": "clint_contacts_create",
+    "candidate_params": {
+      "name": "Bianca Werneck"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_delete_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_delete",
+    "variation": 1,
+    "prompt": "remove o contato 55821 da base — duplicate detectado no dedup audit",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_delete_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_delete",
+    "variation": 2,
+    "prompt": "deleta o lead contact_id=99012, GDPR request veio pelo legal ontem",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "99012"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_delete_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_delete",
+    "variation": 3,
+    "prompt": "tira o contato 71223 da base — junk lead, não passou no scoring de ICP",
+    "candidate_tool": "clint_contacts_delete",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_get_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_get",
+    "variation": 1,
+    "prompt": "abre o perfil completo do contato 44129 antes do call review com o rep",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_get_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_get",
+    "variation": 2,
+    "prompt": "me dá o registro do lead contact_id=88321 — preciso validar firmographics antes do forecast",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_get_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_get",
+    "variation": 3,
+    "prompt": "puxa o payload do contato Felipe Aragão ID 22011 pra checagem de stage e last touch",
+    "candidate_tool": "clint_contacts_get",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_list_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_list",
+    "variation": 1,
+    "prompt": "preciso da base de contatos com cohort 2025-Q1 ainda em pipeline aberto",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_list_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_list",
+    "variation": 2,
+    "prompt": "lista os leads criados nos últimos 90 dias — vou segmentar por origin pra attribution review",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_list_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_list",
+    "variation": 3,
+    "prompt": "rola a base inteira paginando, preciso da volumetria YTD pra calcular LTV/CAC por canal",
+    "candidate_tool": "clint_contacts_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_add_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 1,
+    "prompt": "tagueia o contato 77821 como ICP-enterprise e high-priority — promoveu pra SQL hoje",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_add_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 2,
+    "prompt": "adiciona as tags 'cohort-q4-2025' e 'webinar-attended' no lead 33001",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "33001"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_add_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_add",
+    "variation": 3,
+    "prompt": "marca o contato 91120 com a tag champion-identified pra cross-ref no playbook ABM",
+    "candidate_tool": "clint_contacts_tags_add",
+    "candidate_params": {
+      "contact_id": "91120",
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "extra param: tag_id"
+    ]
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_remove_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 1,
+    "prompt": "remove a tag 'cold-lead' do contato 22198 — reaqueceu no nurturing",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "cold-lead"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_remove_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 2,
+    "prompt": "tira a tag webinar-q3 do lead 88001, já foi re-classificado pro cohort novo",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_tags_remove_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_tags_remove",
+    "variation": 3,
+    "prompt": "desatribui a label 'mql-pending' do contato 55432 — virou SQL no scoring update",
+    "candidate_tool": "clint_contacts_tags_remove",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "tag_name": "mql-pending"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_update_v1",
+    "persona": "C",
+    "target_tool": "clint_contacts_update",
+    "variation": 1,
+    "prompt": "atualiza o contato 88321 — mudou de cargo pra VP Finance, preciso refletir no ICP scoring",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_update_v2",
+    "persona": "C",
+    "target_tool": "clint_contacts_update",
+    "variation": 2,
+    "prompt": "edita o lead 44012, novo email corporativo e telefone atualizado pelo SDR no last touch",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "44012",
+      "email": "<new_email>",
+      "phone": "<new_phone>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_contacts_update_v3",
+    "persona": "C",
+    "target_tool": "clint_contacts_update",
+    "variation": 3,
+    "prompt": "patch no contact 71129 — owner reassignment pro AE sênior, deal entrou em forecast commit",
+    "candidate_tool": "clint_contacts_update",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "fields": {
+        "owner": "<ae_senior_id>"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_data_get_v1",
+    "persona": "C",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 1,
+    "prompt": "executa todos os charts do dashboard 1102 — preciso do snapshot pra performance review semanal de quinta",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_data_get_v2",
+    "persona": "C",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 2,
+    "prompt": "puxa os dados consolidados do dashboard forecast-q4 — vou comparar forecast vs actual MoM",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_data_get_v3",
+    "persona": "C",
+    "target_tool": "clint_dashboards_data_get",
+    "variation": 3,
+    "prompt": "roda o dashboard 8821 inteiro paginando os charts, preciso do pipeline coverage YoY",
+    "candidate_tool": "clint_dashboards_data_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_get_v1",
+    "persona": "C",
+    "target_tool": "clint_dashboards_get",
+    "variation": 1,
+    "prompt": "abre o dashboard 4471 — quero ver a configuração de charts antes de pedir ajuste ao analytics",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_get_v2",
+    "persona": "C",
+    "target_tool": "clint_dashboards_get",
+    "variation": 2,
+    "prompt": "me dá o detalhe do dashboard sales-ops-main com a lista completa de charts vinculados",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_get_v3",
+    "persona": "C",
+    "target_tool": "clint_dashboards_get",
+    "variation": 3,
+    "prompt": "puxa o metadata do dashboard 9982 — preciso ver quais widgets cobrem stage conversion",
+    "candidate_tool": "clint_dashboards_get",
+    "candidate_params": {
+      "dashboard_id": "<dashboard_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_list_v1",
+    "persona": "C",
+    "target_tool": "clint_dashboards_list",
+    "variation": 1,
+    "prompt": "lista todos os dashboards disponíveis na conta — vou auditar duplicidade antes da migração pro novo workspace",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_list_v2",
+    "persona": "C",
+    "target_tool": "clint_dashboards_list",
+    "variation": 2,
+    "prompt": "quais dashboards estão publicados? preciso mapear cobertura analítica do time comercial",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_dashboards_list_v3",
+    "persona": "C",
+    "target_tool": "clint_dashboards_list",
+    "variation": 3,
+    "prompt": "rola o catálogo de dashboards paginado, vou indexar pro runbook de onboarding dos AEs novos",
+    "candidate_tool": "clint_dashboards_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_create_v1",
+    "persona": "C",
+    "target_tool": "clint_deals_create",
+    "variation": 1,
+    "prompt": "cria um deal novo de R$ 25k pro contato 88321, stage discovery, owner AE Larissa, expected close Q4 2025",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>",
+      "contact_id": "<contact_id>",
+      "value": 25000,
+      "stage_id": "<stage_id_discovery>",
+      "user_id": "<user_id_larissa>",
+      "name": "Deal Q4 2025"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_create_v2",
+    "persona": "C",
+    "target_tool": "clint_deals_create",
+    "variation": 2,
+    "prompt": "registra oportunidade enterprise de R$ 120k vinculada ao lead 44012, attribution Hotmart integration",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>",
+      "value": 120000,
+      "contact_id": "<contact_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_create_v3",
+    "persona": "C",
+    "target_tool": "clint_deals_create",
+    "variation": 3,
+    "prompt": "insere deal novo no pipeline: ARR target R$ 300k, contato 71129, origin Eduzz checkout funnel",
+    "candidate_tool": "clint_deals_create",
+    "candidate_params": {
+      "origin_id": "<origin_id>",
+      "contact_id": "<contact_id>",
+      "value": 300000
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_delete_v1",
+    "persona": "C",
+    "target_tool": "clint_deals_delete",
+    "variation": 2,
+    "prompt": "remove o deal 55129 — duplicate criado por erro do SDR durante o blast de ontem",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_delete_v2",
+    "persona": "C",
+    "target_tool": "clint_deals_delete",
+    "variation": 2,
+    "prompt": "deleta a opp 88421, não é ICP e tá poluindo o weighted pipeline",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_delete_v3",
+    "persona": "C",
+    "target_tool": "clint_deals_delete",
+    "variation": 3,
+    "prompt": "tira o deal 33010 do funil — test record criado em sandbox que vazou pra prod",
+    "candidate_tool": "clint_deals_delete",
+    "candidate_params": {
+      "deal_id": "33010"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_get_v1",
+    "persona": "C",
+    "target_tool": "clint_deals_get",
+    "variation": 1,
+    "prompt": "abre a opp 77821 — preciso revisar stage, weighted amount e next step antes do forecast call",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_get_v2",
+    "persona": "C",
+    "target_tool": "clint_deals_get",
+    "variation": 2,
+    "prompt": "me dá o payload do deal 44129 com todos os campos custom pra reconciliar com o Salesforce mirror",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "44129"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_get_v3",
+    "persona": "C",
+    "target_tool": "clint_deals_get",
+    "variation": 3,
+    "prompt": "puxa o detalhe da oportunidade 99012 — quero auditar deal slippage MoM",
+    "candidate_tool": "clint_deals_get",
+    "candidate_params": {
+      "deal_id": "<deal_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_list_v1",
+    "persona": "C",
+    "target_tool": "clint_deals_list",
+    "variation": 1,
+    "prompt": "lista todas as opps em estágio commit do Q4 2025 — preciso bater forecast vs actual hoje",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {
+      "stage_id": "<commit_stage_id>",
+      "created_at_start": "2025-10-01T00:00:00.000000+00:00",
+      "created_at_end": "2025-12-31T23:59:59.000000+00:00"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_list_v2",
+    "persona": "C",
+    "target_tool": "clint_deals_list",
+    "variation": 2,
+    "prompt": "puxa o pipeline aberto last 90 dias por AE, vou calcular stage conversion YoY",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_list_v3",
+    "persona": "C",
+    "target_tool": "clint_deals_list",
+    "variation": 3,
+    "prompt": "rola os deals YTD paginando — preciso da volumetria total pra ARR rollup",
+    "candidate_tool": "clint_deals_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_update_v1",
+    "persona": "C",
+    "target_tool": "clint_deals_update",
+    "variation": 1,
+    "prompt": "atualiza o deal 88001 pra stage negotiation, weighted prob 70%, close date deslocada pra dezembro",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "stage_id": "<stage_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_update_v2",
+    "persona": "C",
+    "target_tool": "clint_deals_update",
+    "variation": 2,
+    "prompt": "patch na opp 44321 — reassignment pro AE Henrique, amount revisado pra R$ 85k",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "44321",
+      "user_id": "<user_id_henrique>",
+      "value": 85000
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_deals_update_v3",
+    "persona": "C",
+    "target_tool": "clint_deals_update",
+    "variation": 3,
+    "prompt": "edita o deal 71229: muda stage pra proposal sent e atualiza expected close pra Q1 2026",
+    "candidate_tool": "clint_deals_update",
+    "candidate_params": {
+      "deal_id": "<deal_id>",
+      "stage_id": "<proposal_sent_stage_id>",
+      "fields": {
+        "expected_close": "Q1 2026"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_get_v1",
+    "persona": "C",
+    "target_tool": "clint_groups_get",
+    "variation": 1,
+    "prompt": "abre o group 1122 — preciso ver membership antes de reorganizar squads de SDRs",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_get_v2",
+    "persona": "C",
+    "target_tool": "clint_groups_get",
+    "variation": 2,
+    "prompt": "me dá o detalhe do grupo group_id=4421 pra auditar rep allocation",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_get_v3",
+    "persona": "C",
+    "target_tool": "clint_groups_get",
+    "variation": 3,
+    "prompt": "puxa o payload do team 8821 — vou cruzar com performance MoM",
+    "candidate_tool": "clint_groups_get",
+    "candidate_params": {
+      "group_id": "<group_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_list_v1",
+    "persona": "C",
+    "target_tool": "clint_groups_list",
+    "variation": 1,
+    "prompt": "lista os grupos configurados na conta — preciso mapear estrutura organizacional antes do headcount planning de 2026",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_list_v2",
+    "persona": "C",
+    "target_tool": "clint_groups_list",
+    "variation": 2,
+    "prompt": "quais squads estão cadastrados? quero comparar capacity vs deal load por time",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_groups_list_v3",
+    "persona": "C",
+    "target_tool": "clint_groups_list",
+    "variation": 3,
+    "prompt": "rola o catálogo de groups paginado, vou usar no rollup de rep performance",
+    "candidate_tool": "clint_groups_list",
+    "candidate_params": {
+      "page": 1
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_get_v1",
+    "persona": "C",
+    "target_tool": "clint_lost_status_get",
+    "variation": 1,
+    "prompt": "abre o lost status 221 — preciso da descrição exata pra padronizar churn reason no BI",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "221"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_get_v2",
+    "persona": "C",
+    "target_tool": "clint_lost_status_get",
+    "variation": 2,
+    "prompt": "me dá o detalhe do motivo de perda lost_status_id=44 antes do post-mortem do deal enterprise",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_get_v3",
+    "persona": "C",
+    "target_tool": "clint_lost_status_get",
+    "variation": 3,
+    "prompt": "puxa o payload do lost reason 12, vou cross-referenciar com competitive intel da semana",
+    "candidate_tool": "clint_lost_status_get",
+    "candidate_params": {
+      "lost_status_id": "<lost_status_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_list_v1",
+    "persona": "C",
+    "target_tool": "clint_lost_status_list",
+    "variation": 1,
+    "prompt": "lista todos os motivos de perda cadastrados — preciso consolidar taxonomy pra churn analysis Q4 2025 YoY",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_list_v2",
+    "persona": "C",
+    "target_tool": "clint_lost_status_list",
+    "variation": 2,
+    "prompt": "quais lost reasons estão ativos? vou auditar distribuição last 90d pra identificar root cause patterns",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_lost_status_list_v3",
+    "persona": "C",
+    "target_tool": "clint_lost_status_list",
+    "variation": 3,
+    "prompt": "rola a lista de status de perda paginando, preciso pro mapping com Salesforce closed-lost reasons",
+    "candidate_tool": "clint_lost_status_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_get_v1",
+    "persona": "C",
+    "target_tool": "clint_message_templates_get",
+    "variation": 1,
+    "prompt": "abre o template HSM 8821 — preciso validar copy aprovada pela Meta antes do blast de outbound",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_get_v2",
+    "persona": "C",
+    "target_tool": "clint_message_templates_get",
+    "variation": 2,
+    "prompt": "me dá o detalhe do template_id=4471 com placeholders e categoria pra checagem de compliance",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_get_v3",
+    "persona": "C",
+    "target_tool": "clint_message_templates_get",
+    "variation": 3,
+    "prompt": "puxa o template 9912 pra revisar status APPROVED e variáveis antes da campanha Q4",
+    "candidate_tool": "clint_message_templates_get",
+    "candidate_params": {
+      "template_id": "<template_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_list_v1",
+    "persona": "C",
+    "target_tool": "clint_message_templates_list",
+    "variation": 1,
+    "prompt": "lista os HSMs do WABA wba-prod-001 — preciso inventariar templates aprovados antes do outbound de Q4 2025",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_list_v2",
+    "persona": "C",
+    "target_tool": "clint_message_templates_list",
+    "variation": 2,
+    "prompt": "quais message templates estão disponíveis no channel account 5532? quero auditar coverage de utility vs marketing",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_message_templates_list_v3",
+    "persona": "C",
+    "target_tool": "clint_message_templates_list",
+    "variation": 3,
+    "prompt": "rola o catálogo de templates do channel 8821 paginando, vou mapear pra reativação de cohort cold last 30d",
+    "candidate_tool": "clint_message_templates_list",
+    "candidate_params": {
+      "channel_account_id": "8821"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_audio_send_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 1,
+    "prompt": "dispara o voice note gravado pelo CRO pro contato 88321 via WABA principal — é o follow-up do enterprise deal",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_audio_send_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 2,
+    "prompt": "envia o áudio com pitch executivo (URL https://cdn.x/audio.mp3) pro lead 44012, dentro da messaging window",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "https://cdn.x/audio.mp3",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_audio_send_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_audio_send",
+    "variation": 3,
+    "prompt": "manda o voice da Renata pro contato 71129 — quero touchpoint diferenciado no high-ticket account",
+    "candidate_tool": "clint_messages_audio_send",
+    "candidate_params": {
+      "url": "<audio_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_by_chat_list_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 1,
+    "prompt": "puxa o transcript completo do chat 99182 ordenado desc — preciso pro call review e attribution recap",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_by_chat_list_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 2,
+    "prompt": "lista as mensagens da thread chat_id=44021 dos últimos 7 dias pro post-mortem do deal slip",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "44021"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_by_chat_list_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_by_chat_list",
+    "variation": 3,
+    "prompt": "rola o histórico completo do chat 71203 paginando, vou usar como benchmark de qualified conversation",
+    "candidate_tool": "clint_messages_by_chat_list",
+    "candidate_params": {
+      "chat_id": "<chat_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_document_send_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_document_send",
+    "variation": 1,
+    "prompt": "envia o pitch deck Q4-2025-enterprise.pdf pro contato 88321 via WhatsApp Official, filename customizado",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "Q4-2025-enterprise.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_document_send_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_document_send",
+    "variation": 2,
+    "prompt": "dispara o contrato (URL https://cdn.x/msa.pdf) pro lead 44012 pelo WABA principal — filename 'MSA-Bridge-Capital.pdf'",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "https://cdn.x/msa.pdf",
+      "contact_id": "<contact_id>",
+      "filename": "MSA-Bridge-Capital.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_document_send_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_document_send",
+    "variation": 3,
+    "prompt": "manda a proposta comercial em PDF pro contato 71129 com filename 'Proposta-25k-Q4.pdf'",
+    "candidate_tool": "clint_messages_document_send",
+    "candidate_params": {
+      "url": "<document_url>",
+      "contact_id": "<contact_id>",
+      "filename": "Proposta-25k-Q4.pdf",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_get_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_get",
+    "variation": 1,
+    "prompt": "abre o registro da mensagem 99821 — preciso confirmar delivery status e timestamp pro SLA report",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_get_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_get",
+    "variation": 2,
+    "prompt": "me dá o payload da message_id=44210 pra auditar se foi entregue antes da janela de 24h fechar",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "44210"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_get_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_get",
+    "variation": 3,
+    "prompt": "puxa o detalhe da msg 71229 — quero ver provider response e read receipt",
+    "candidate_tool": "clint_messages_get",
+    "candidate_params": {
+      "message_id": "<message_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_image_send_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_image_send",
+    "variation": 1,
+    "prompt": "envia o asset visual do case study pro contato 88321 via WhatsApp Official, dentro da messaging window",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "contact_id": "88321",
+      "image_url": "<image_url>"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'url']",
+      "extra param: image_url"
+    ]
+  },
+  {
+    "prompt_id": "C_clint_messages_image_send_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_image_send",
+    "variation": 2,
+    "prompt": "dispara o screenshot do dashboard de ROI (URL https://cdn.x/roi.png) pro lead 44012",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "https://cdn.x/roi.png",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_image_send_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_image_send",
+    "variation": 3,
+    "prompt": "manda a imagem do org chart aprovado pro contato 71129 pelo WABA principal",
+    "candidate_tool": "clint_messages_image_send",
+    "candidate_params": {
+      "url": "<image_url>",
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "caption": "org chart aprovado"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_template_send_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_template_send",
+    "variation": 1,
+    "prompt": "dispara o HSM 'reactivation_q4' pro contato 88321 com variáveis nome e oferta — está fora da janela 24h",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>",
+      "parameters": {
+        "1": "<nome>",
+        "2": "<oferta>"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_template_send_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_template_send",
+    "variation": 2,
+    "prompt": "envia o template aprovado 'webinar_invite_enterprise' pro lead 44012 com placeholders preenchidos",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>",
+      "parameters": {}
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_template_send_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_template_send",
+    "variation": 3,
+    "prompt": "manda o HSM marketing 'forecast_followup' pro contato 71129 com params name='Marcos' e amount='25k'",
+    "candidate_tool": "clint_messages_template_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "template_id": "<template_id>",
+      "parameters": {
+        "1": "Marcos",
+        "2": "25k"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_text_send_v1",
+    "persona": "C",
+    "target_tool": "clint_messages_text_send",
+    "variation": 1,
+    "prompt": "envia texto pro contato 88321 com follow-up do meeting de discovery — dentro da janela de 24h",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "<contact_id>",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Follow-up do nosso meeting de discovery"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_messages_text_send_v2",
+    "persona": "C",
+    "target_tool": "clint_messages_text_send",
+    "variation": 2,
+    "prompt": "dispara mensagem pro lead 44012 confirmando call de quinta às 14h via WABA principal",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "44012",
+      "text": "Confirmando nossa call de quinta às 14h."
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['channel_account_id', 'message']",
+      "extra param: text"
+    ]
+  },
+  {
+    "prompt_id": "C_clint_messages_text_send_v3",
+    "persona": "C",
+    "target_tool": "clint_messages_text_send",
+    "variation": 3,
+    "prompt": "manda texto pro contato 71129 com o link da proposta — quero acelerar stage velocity",
+    "candidate_tool": "clint_messages_text_send",
+    "candidate_params": {
+      "contact_id": "71129",
+      "channel_account_id": "<channel_account_id>",
+      "message": "Segue o link da proposta: <link>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_get_v1",
+    "persona": "C",
+    "target_tool": "clint_organizations_get",
+    "variation": 1,
+    "prompt": "abre a organization 1102 — preciso revisar firmographics antes do QBR com o account",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_get_v2",
+    "persona": "C",
+    "target_tool": "clint_organizations_get",
+    "variation": 2,
+    "prompt": "me dá o payload da empresa org_id=4471 pra cruzar com data do Crunchbase no enrichment",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_get_v3",
+    "persona": "C",
+    "target_tool": "clint_organizations_get",
+    "variation": 3,
+    "prompt": "puxa o detalhe da org 8821, quero validar industry e size antes do tier assignment",
+    "candidate_tool": "clint_organizations_get",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_update_v1",
+    "persona": "C",
+    "target_tool": "clint_organizations_update",
+    "variation": 1,
+    "prompt": "atualiza a org 1102 — novo segment 'enterprise', headcount revisado pra 850, tier upgrade pra strategic",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>",
+      "fields": {
+        "segment": "enterprise",
+        "headcount": 850,
+        "tier": "strategic"
+      }
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_update_v2",
+    "persona": "C",
+    "target_tool": "clint_organizations_update",
+    "variation": 2,
+    "prompt": "patch na company org_id=4471, mudou de CNPJ e address fiscal — preciso refletir no contrato",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "<organization_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_organizations_update_v3",
+    "persona": "C",
+    "target_tool": "clint_organizations_update",
+    "variation": 3,
+    "prompt": "edita a organização 8821 com ARR atualizado e industry NAICS code corrigido",
+    "candidate_tool": "clint_organizations_update",
+    "candidate_params": {
+      "organization_id": "8821"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_get_v1",
+    "persona": "C",
+    "target_tool": "clint_origins_get",
+    "variation": 1,
+    "prompt": "abre o origin 221 — preciso entender attribution mapping antes do multi-touch report",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_get_v2",
+    "persona": "C",
+    "target_tool": "clint_origins_get",
+    "variation": 2,
+    "prompt": "me dá o payload da source origin_id=44 pra cruzar com UTM taxonomy do paid social",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_get_v3",
+    "persona": "C",
+    "target_tool": "clint_origins_get",
+    "variation": 3,
+    "prompt": "puxa o detalhe do origin 12 — vou validar pra last-touch attribution Q4 2025",
+    "candidate_tool": "clint_origins_get",
+    "candidate_params": {
+      "origin_id": "<origin_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_list_v1",
+    "persona": "C",
+    "target_tool": "clint_origins_list",
+    "variation": 1,
+    "prompt": "lista todas as origins cadastradas — preciso do inventory completo pra reconciliar attribution multi-canal YTD",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_list_v2",
+    "persona": "C",
+    "target_tool": "clint_origins_list",
+    "variation": 2,
+    "prompt": "quais sources de lead estão configuradas? quero auditar contribution por canal MoM",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_origins_list_v3",
+    "persona": "C",
+    "target_tool": "clint_origins_list",
+    "variation": 3,
+    "prompt": "rola o catálogo de origins paginando, vou mapear pra weighted pipeline contribution por canal",
+    "candidate_tool": "clint_origins_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_create_v1",
+    "persona": "C",
+    "target_tool": "clint_tags_create",
+    "variation": 1,
+    "prompt": "cria a tag 'cohort-2025-q4-enterprise' pra segmentar high-ticket nesta wave de outbound",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "cohort-2025-q4-enterprise",
+      "color": "#3f51b5"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_create_v2",
+    "persona": "C",
+    "target_tool": "clint_tags_create",
+    "variation": 2,
+    "prompt": "registra label nova 'webinar-blackfriday-attendee' pra atribuir nos leads do evento ontem",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "webinar-blackfriday-attendee"
+    },
+    "tool_hit": true,
+    "param_hit": false,
+    "both": false,
+    "fail_reasons": [
+      "missing required: ['color']"
+    ]
+  },
+  {
+    "prompt_id": "C_clint_tags_create_v3",
+    "persona": "C",
+    "target_tool": "clint_tags_create",
+    "variation": 3,
+    "prompt": "adiciona a tag 'icp-tier-1-champion' no catálogo pro ABM playbook de Q4",
+    "candidate_tool": "clint_tags_create",
+    "candidate_params": {
+      "name": "icp-tier-1-champion",
+      "color": "#f44336"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_delete_v1",
+    "persona": "C",
+    "target_tool": "clint_tags_delete",
+    "variation": 1,
+    "prompt": "remove a tag 8821 — deprecated no taxonomy cleanup desta sprint",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_delete_v2",
+    "persona": "C",
+    "target_tool": "clint_tags_delete",
+    "variation": 2,
+    "prompt": "deleta a label tag_id=4421, virou redundante depois do merge com 'enterprise-icp'",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_delete_v3",
+    "persona": "C",
+    "target_tool": "clint_tags_delete",
+    "variation": 3,
+    "prompt": "tira a tag 1102 do catálogo — sunset do programa associado",
+    "candidate_tool": "clint_tags_delete",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_get_v1",
+    "persona": "C",
+    "target_tool": "clint_tags_get",
+    "variation": 1,
+    "prompt": "abre a tag 221 — preciso validar definição exata antes de subir no data dictionary",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_get_v2",
+    "persona": "C",
+    "target_tool": "clint_tags_get",
+    "variation": 2,
+    "prompt": "me dá o detalhe da label tag_id=44 pra auditar coverage no cohort 2025-Q1",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_get_v3",
+    "persona": "C",
+    "target_tool": "clint_tags_get",
+    "variation": 3,
+    "prompt": "puxa o payload da tag 12 — vou cross-ref com mapping do BI",
+    "candidate_tool": "clint_tags_get",
+    "candidate_params": {
+      "tag_id": "<tag_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_list_v1",
+    "persona": "C",
+    "target_tool": "clint_tags_list",
+    "variation": 1,
+    "prompt": "lista todas as tags ativas — preciso auditar taxonomy duplicada antes do cleanup de Q4",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_list_v2",
+    "persona": "C",
+    "target_tool": "clint_tags_list",
+    "variation": 2,
+    "prompt": "quais labels estão configuradas? vou consolidar pra normalizar segmentation no Looker",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_tags_list_v3",
+    "persona": "C",
+    "target_tool": "clint_tags_list",
+    "variation": 3,
+    "prompt": "rola o inventory completo de tags paginando, preciso pro mapping com Salesforce custom fields",
+    "candidate_tool": "clint_tags_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_get_v1",
+    "persona": "C",
+    "target_tool": "clint_users_get",
+    "variation": 1,
+    "prompt": "abre o user 4471 — preciso revisar role e quota assignment antes do comp plan review",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "4471"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_get_v2",
+    "persona": "C",
+    "target_tool": "clint_users_get",
+    "variation": 2,
+    "prompt": "me dá o payload do rep user_id=8821 pra correlacionar com win rate YTD",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_get_v3",
+    "persona": "C",
+    "target_tool": "clint_users_get",
+    "variation": 3,
+    "prompt": "puxa o detalhe do AE 1102 — vou cruzar com stage velocity dele no 1:1 de quinta",
+    "candidate_tool": "clint_users_get",
+    "candidate_params": {
+      "user_id": "<user_id>"
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_list_v1",
+    "persona": "C",
+    "target_tool": "clint_users_list",
+    "variation": 1,
+    "prompt": "lista todos os users ativos — preciso bater headcount com a allocation de quota Q4 2025",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_list_v2",
+    "persona": "C",
+    "target_tool": "clint_users_list",
+    "variation": 2,
+    "prompt": "quais reps estão cadastrados no CRM? vou rodar rep performance leaderboard MoM",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {},
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  },
+  {
+    "prompt_id": "C_clint_users_list_v3",
+    "persona": "C",
+    "target_tool": "clint_users_list",
+    "variation": 3,
+    "prompt": "rola a base de usuários paginando, preciso do roster completo pro forecast roll-up por owner",
+    "candidate_tool": "clint_users_list",
+    "candidate_params": {
+      "page": 1
+    },
+    "tool_hit": true,
+    "param_hit": true,
+    "both": true,
+    "fail_reasons": []
+  }
+]
