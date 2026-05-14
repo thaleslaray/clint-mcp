@@ -43,83 +43,69 @@ class _RateLimiter:
             self._last = time.monotonic()
 
 
-_client: httpx.AsyncClient | None = None
-_limiter: _RateLimiter | None = None
+class ClintClient:
+    """Async client for the Clint CRM API.
 
+    Reads CLINT_API_TOKEN and (optionally) CLINT_MAX_RPS at first use.
+    Use the module-level `get_client()` from `_shared.py` to access the
+    lazy singleton — tools never instantiate this directly.
+    """
 
-def _get_token() -> str:
-    token = os.environ.get("CLINT_API_TOKEN")
-    if not token:
-        raise RuntimeError("CLINT_API_TOKEN env var not set")
-    return token
-
-
-def _get_limiter() -> _RateLimiter:
-    global _limiter
-    if _limiter is None:
+    def __init__(self) -> None:
+        token = os.environ.get("CLINT_API_TOKEN")
+        if not token:
+            raise RuntimeError("CLINT_API_TOKEN env var not set")
         rps = float(os.environ.get("CLINT_MAX_RPS", "5"))
-        _limiter = _RateLimiter(rps)
-    return _limiter
 
-
-async def _get_client() -> httpx.AsyncClient:
-    global _client
-    if _client is None:
-        _client = httpx.AsyncClient(
+        self._token = token
+        self._limiter = _RateLimiter(rps)
+        self._http = httpx.AsyncClient(
             base_url=BASE_URL,
             timeout=DEFAULT_TIMEOUT,
             headers={"accept": "application/json"},
         )
-    return _client
 
+    async def request(
+        self,
+        method: str,
+        path: str,
+        *,
+        params: dict[str, Any] | None = None,
+        json_body: dict[str, Any] | None = None,
+    ) -> Any:
+        """Perform an authenticated request against the Clint API.
 
-async def request(
-    method: str,
-    path: str,
-    *,
-    params: dict[str, Any] | None = None,
-    json_body: dict[str, Any] | None = None,
-) -> Any:
-    """Perform an authenticated request against the Clint API.
+        `params` and `json_body` may contain None values — they're stripped here.
+        """
+        await self._limiter.acquire()
+        clean_params = {k: v for k, v in (params or {}).items() if v is not None}
+        clean_body = (
+            {k: v for k, v in (json_body or {}).items() if v is not None}
+            if json_body is not None
+            else None
+        )
 
-    `params` and `json_body` may contain None values — they're stripped here.
-    """
-    limiter = _get_limiter()
-    await limiter.acquire()
-    client = await _get_client()
+        resp = await self._http.request(
+            method,
+            path,
+            params=clean_params or None,
+            json=clean_body,
+            headers={"api-token": self._token},
+        )
 
-    clean_params = {k: v for k, v in (params or {}).items() if v is not None}
-    clean_body = (
-        {k: v for k, v in (json_body or {}).items() if v is not None}
-        if json_body is not None
-        else None
-    )
+        if resp.status_code >= 400:
+            try:
+                body = resp.json()
+            except Exception:
+                body = resp.text
+            raise ClintError(resp.status_code, body, method, path)
 
-    resp = await client.request(
-        method,
-        path,
-        params=clean_params or None,
-        json=clean_body,
-        headers={"api-token": _get_token()},
-    )
+        if resp.status_code == 204 or not resp.content:
+            return None
+        ctype = resp.headers.get("content-type", "")
+        if "json" in ctype:
+            return resp.json()
+        return resp.text
 
-    if resp.status_code >= 400:
-        try:
-            body = resp.json()
-        except Exception:
-            body = resp.text
-        raise ClintError(resp.status_code, body, method, path)
-
-    if resp.status_code == 204 or not resp.content:
-        return None
-    ctype = resp.headers.get("content-type", "")
-    if "json" in ctype:
-        return resp.json()
-    return resp.text
-
-
-async def aclose() -> None:
-    global _client
-    if _client is not None:
-        await _client.aclose()
-        _client = None
+    async def aclose(self) -> None:
+        await self._http.aclose()

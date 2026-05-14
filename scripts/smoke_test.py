@@ -5,7 +5,7 @@ import asyncio
 import time
 from typing import Any, Callable, Awaitable
 
-from clint_mcp.client import aclose
+from clint_mcp._shared import aclose
 from clint_mcp.tools.contacts import clint_contacts_list
 from clint_mcp.tools.users import clint_users_list
 from clint_mcp.tools.tags import clint_tags_list

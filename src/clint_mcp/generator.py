@@ -13,7 +13,7 @@ from pathlib import Path
 from textwrap import indent
 
 ROOT = Path(__file__).resolve().parents[2]
-SPEC_PATH = ROOT / "docs" / "openapi.json"
+SPEC_PATH = ROOT / "specs" / "openapi.json"
 TOOLS_DIR = Path(__file__).resolve().parent / "tools"
 
 # --- Tool naming map ---------------------------------------------------------
@@ -438,7 +438,7 @@ def main() -> None:
             "from __future__ import annotations\n\n"
             "from typing import Annotated, Any\n\n"
             "from pydantic import Field\n\n"
-            "from clint_mcp.client import request\n\n\n"
+            "from clint_mcp._shared import request\n\n\n"
         )
         (TOOLS_DIR / f"{module}.py").write_text(header + "\n\n".join(funcs))
 

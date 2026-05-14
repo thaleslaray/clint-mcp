@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import asyncio
 
-from clint_mcp.client import aclose
+from clint_mcp._shared import aclose
 from clint_mcp.tools.channel_accounts import clint_channel_accounts_list
 from clint_mcp.tools.contacts import clint_contacts_list
 from clint_mcp.tools.messages import clint_messages_text_send

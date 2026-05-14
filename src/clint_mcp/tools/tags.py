@@ -5,7 +5,7 @@ from typing import Annotated, Any
 
 from pydantic import Field
 
-from clint_mcp.client import request
+from clint_mcp._shared import request
 
 
 async def clint_tags_create(color: Annotated[str, Field(description="""Allowed values (case-sensitive, pass EXACTLY as listed):

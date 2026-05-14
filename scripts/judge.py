@@ -15,7 +15,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TESTS = ROOT / "tests"
+TESTS = ROOT / "scripts"
 
 
 def load_candidates() -> dict[str, dict]:
@@ -26,7 +26,7 @@ def load_candidates() -> dict[str, dict]:
     """
     out: dict[str, dict] = {}
     for i in range(1, 7):
-        path = TESTS / f"candidates_batch_{i}.json"
+        path = TESTS / "candidates" / f"candidates_batch_{i}.json"
         if not path.exists():
             raise SystemExit(f"Missing {path}")
         data = json.loads(path.read_text())
@@ -40,7 +40,7 @@ def load_candidates() -> dict[str, dict]:
 
 
 def load_schemas() -> dict[str, dict]:
-    bundle = json.loads((TESTS / "tool_schemas.json").read_text())
+    bundle = json.loads((TESTS / "tool-schemas.json").read_text())
     return {t["name"]: t for t in bundle}
 
 
@@ -97,7 +97,7 @@ def param_hit(candidate_params: dict, target_schema: dict) -> tuple[bool, list[s
 def main() -> None:
     candidates = load_candidates()
     schemas = load_schemas()
-    prompts = json.loads((TESTS / "prompts.json").read_text())
+    prompts = json.loads((TESTS / "eval-cases.json").read_text())
 
     rows = []
     for p in prompts:
@@ -178,12 +178,12 @@ def main() -> None:
         if r.get("fail_reasons"):
             out_lines.append(f"  - param fails: {r['fail_reasons']}")
 
-    (ROOT / "tests" / "report.md").write_text("\n".join(out_lines) + "\n")
-    (ROOT / "tests" / "results.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
+    (ROOT / "scripts" / "eval-report.md").write_text("\n".join(out_lines) + "\n")
+    (ROOT / "scripts" / "eval-results.json").write_text(json.dumps(rows, indent=2, ensure_ascii=False))
 
     print(f"Total: {n} | tool={tool_hits/n:.1%} | param={param_hits/n:.1%} | both={both/n:.1%}")
     print(f"Threshold (0.95 both): {'PASS' if both/n >= 0.95 else 'FAIL'}")
-    print(f"Reports -> tests/report.md, tests/results.json")
+    print(f"Reports -> scripts/eval-report.md, scripts/eval-results.json")
 
 
 if __name__ == "__main__":

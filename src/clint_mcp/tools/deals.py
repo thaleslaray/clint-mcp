@@ -5,7 +5,7 @@ from typing import Annotated, Any
 
 from pydantic import Field
 
-from clint_mcp.client import request
+from clint_mcp._shared import request
 
 
 async def clint_deals_create(origin_id: Annotated[str, Field(description="""Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")], name: Annotated[str | None, Field(description="""Example: 'Contact name'""")] = None, phone: Annotated[str | None, Field(description="""Example: '48999999999'""")] = None, email: Annotated[str | None, Field(description="""Example: 'contact@email.com'""")] = None, username: Annotated[str | None, Field(description="""Example: 'Instagram ID'""")] = None, value: Annotated[float | None, Field(description="""Example: '200.5'""")] = None, stage_id: Annotated[str | None, Field(description="""Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, user_id: Annotated[str | None, Field(description="""Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, contact_id: Annotated[str | None, Field(description="""Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, fields: Annotated[dict | None, Field(description="""Type: object""")] = None) -> Any:

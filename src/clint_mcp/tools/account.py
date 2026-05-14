@@ -5,7 +5,7 @@ from typing import Annotated, Any
 
 from pydantic import Field
 
-from clint_mcp.client import request
+from clint_mcp._shared import request
 
 
 async def clint_account_fields_list() -> Any:

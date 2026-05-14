@@ -81,7 +81,7 @@ Then `/exit` and reopen Claude Code.
 python -m clint_mcp.generator
 ```
 
-Reads `docs/openapi.json` (consolidated from 46 ReadMe `.md` pages in `docs/endpoints/`) and rewrites `src/clint_mcp/tools/*.py`.
+Reads `specs/openapi.json` (consolidated from 46 ReadMe `.md` pages in `specs/endpoints/`) and rewrites `src/clint_mcp/tools/*.py`.
 
 ## Re-running the eval
 

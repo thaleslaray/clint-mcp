@@ -1,6 +1,6 @@
 """FastMCP server for the Clint CRM API.
 
-All 46 tools auto-generated from the OpenAPI spec at docs/openapi.json
+All 46 tools auto-generated from the OpenAPI spec at specs/openapi.json
 are collapsed into 3 meta-tools (search/get_schema/execute) via CodeMode.
 """
 from __future__ import annotations
@@ -8,6 +8,7 @@ from __future__ import annotations
 from fastmcp import FastMCP
 from fastmcp.experimental.transforms.code_mode import CodeMode, MontySandboxProvider
 
+from clint_mcp.apps import ALL_APPS
 from clint_mcp.tools import ALL_TOOLS
 
 INSTRUCTIONS = """
@@ -28,6 +29,11 @@ Code Mode is enabled — interact via the 3 meta-tools:
 
 
 mcp = FastMCP("clint", instructions=INSTRUCTIONS)
+
+# Register Prefab Apps BEFORE CodeMode — apps bypass the meta-tool collapsing
+# so they remain directly callable with full visual rendering.
+for fn in ALL_APPS:
+    mcp.tool(fn, app=True)
 
 for fn in ALL_TOOLS:
     mcp.tool(fn)

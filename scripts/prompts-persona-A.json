@@ -1,0 +1,185 @@
+[
+  {"prompt_id": "A_clint_account_fields_list_v1", "persona": "A", "target_tool": "clint_account_fields_list", "variation": 1, "prompt": "que campos eu tenho cadastrado na minha conta?"},
+  {"prompt_id": "A_clint_account_fields_list_v2", "persona": "A", "target_tool": "clint_account_fields_list", "variation": 2, "prompt": "me lista os campos personalizados aí"},
+  {"prompt_id": "A_clint_account_fields_list_v3", "persona": "A", "target_tool": "clint_account_fields_list", "variation": 3, "prompt": "quais info dá pra preencher no contato?"},
+
+  {"prompt_id": "A_clint_channel_accounts_get_v1", "persona": "A", "target_tool": "clint_channel_accounts_get", "variation": 1, "prompt": "me mostra os detalhes daquele whatsapp que eu conectei"},
+  {"prompt_id": "A_clint_channel_accounts_get_v2", "persona": "A", "target_tool": "clint_channel_accounts_get", "variation": 2, "prompt": "abre o canal do zap, quero ver"},
+  {"prompt_id": "A_clint_channel_accounts_get_v3", "persona": "A", "target_tool": "clint_channel_accounts_get", "variation": 3, "prompt": "puxa info daquele número de whatsapp aí"},
+
+  {"prompt_id": "A_clint_channel_accounts_list_v1", "persona": "A", "target_tool": "clint_channel_accounts_list", "variation": 1, "prompt": "quais zaps eu tenho ligado aqui?"},
+  {"prompt_id": "A_clint_channel_accounts_list_v2", "persona": "A", "target_tool": "clint_channel_accounts_list", "variation": 2, "prompt": "lista meus números de whatsapp"},
+  {"prompt_id": "A_clint_channel_accounts_list_v3", "persona": "A", "target_tool": "clint_channel_accounts_list", "variation": 3, "prompt": "quantos canais de zap tô usando?"},
+
+  {"prompt_id": "A_clint_charts_data_get_v1", "persona": "A", "target_tool": "clint_charts_data_get", "variation": 1, "prompt": "me mostra os dados daquele gráfico"},
+  {"prompt_id": "A_clint_charts_data_get_v2", "persona": "A", "target_tool": "clint_charts_data_get", "variation": 2, "prompt": "puxa o gráfico de vendas aí"},
+  {"prompt_id": "A_clint_charts_data_get_v3", "persona": "A", "target_tool": "clint_charts_data_get", "variation": 3, "prompt": "que número tá dando naquele gráfico?"},
+
+  {"prompt_id": "A_clint_chats_by_channel_account_list_v1", "persona": "A", "target_tool": "clint_chats_by_channel_account_list", "variation": 1, "prompt": "todas as conversas do meu zap principal"},
+  {"prompt_id": "A_clint_chats_by_channel_account_list_v2", "persona": "A", "target_tool": "clint_chats_by_channel_account_list", "variation": 2, "prompt": "quem tá conversando comigo nesse número?"},
+  {"prompt_id": "A_clint_chats_by_channel_account_list_v3", "persona": "A", "target_tool": "clint_chats_by_channel_account_list", "variation": 3, "prompt": "lista os chats daquela linha lá"},
+
+  {"prompt_id": "A_clint_chats_by_contact_list_v1", "persona": "A", "target_tool": "clint_chats_by_contact_list", "variation": 1, "prompt": "todas as conversas que tive com a Marina"},
+  {"prompt_id": "A_clint_chats_by_contact_list_v2", "persona": "A", "target_tool": "clint_chats_by_contact_list", "variation": 2, "prompt": "me mostra o histórico de chat dessa lead"},
+  {"prompt_id": "A_clint_chats_by_contact_list_v3", "persona": "A", "target_tool": "clint_chats_by_contact_list", "variation": 3, "prompt": "quantas vezes ela já me chamou no zap?"},
+
+  {"prompt_id": "A_clint_chats_get_v1", "persona": "A", "target_tool": "clint_chats_get", "variation": 1, "prompt": "abre essa conversa aí pra mim"},
+  {"prompt_id": "A_clint_chats_get_v2", "persona": "A", "target_tool": "clint_chats_get", "variation": 2, "prompt": "me dá detalhe desse chat específico"},
+  {"prompt_id": "A_clint_chats_get_v3", "persona": "A", "target_tool": "clint_chats_get", "variation": 3, "prompt": "puxa essa conversa do zap"},
+
+  {"prompt_id": "A_clint_contacts_attachments_list_v1", "persona": "A", "target_tool": "clint_contacts_attachments_list", "variation": 1, "prompt": "que arquivo ela já mandou pra mim?"},
+  {"prompt_id": "A_clint_contacts_attachments_list_v2", "persona": "A", "target_tool": "clint_contacts_attachments_list", "variation": 2, "prompt": "tem comprovante anexado nessa lead?"},
+  {"prompt_id": "A_clint_contacts_attachments_list_v3", "persona": "A", "target_tool": "clint_contacts_attachments_list", "variation": 3, "prompt": "me mostra os anexos dessa pessoa"},
+
+  {"prompt_id": "A_clint_contacts_create_v1", "persona": "A", "target_tool": "clint_contacts_create", "variation": 1, "prompt": "cadastra a Jana aí, número 11 99999-8888"},
+  {"prompt_id": "A_clint_contacts_create_v2", "persona": "A", "target_tool": "clint_contacts_create", "variation": 2, "prompt": "adiciona um contato novo"},
+  {"prompt_id": "A_clint_contacts_create_v3", "persona": "A", "target_tool": "clint_contacts_create", "variation": 3, "prompt": "bota essa cliente nova no sistema"},
+
+  {"prompt_id": "A_clint_contacts_delete_v1", "persona": "A", "target_tool": "clint_contacts_delete", "variation": 1, "prompt": "apaga esse contato aí"},
+  {"prompt_id": "A_clint_contacts_delete_v2", "persona": "A", "target_tool": "clint_contacts_delete", "variation": 2, "prompt": "remove a Patrícia da minha lista"},
+  {"prompt_id": "A_clint_contacts_delete_v3", "persona": "A", "target_tool": "clint_contacts_delete", "variation": 3, "prompt": "deleta esse lead que tá errado"},
+
+  {"prompt_id": "A_clint_contacts_get_v1", "persona": "A", "target_tool": "clint_contacts_get", "variation": 1, "prompt": "me mostra a ficha da Carla aí"},
+  {"prompt_id": "A_clint_contacts_get_v2", "persona": "A", "target_tool": "clint_contacts_get", "variation": 2, "prompt": "abre os dados desse contato"},
+  {"prompt_id": "A_clint_contacts_get_v3", "persona": "A", "target_tool": "clint_contacts_get", "variation": 3, "prompt": "quem é essa pessoa? puxa info dela"},
+
+  {"prompt_id": "A_clint_contacts_list_v1", "persona": "A", "target_tool": "clint_contacts_list", "variation": 1, "prompt": "me mostra todos meus contatos aí"},
+  {"prompt_id": "A_clint_contacts_list_v2", "persona": "A", "target_tool": "clint_contacts_list", "variation": 2, "prompt": "quem entrou essa semana?"},
+  {"prompt_id": "A_clint_contacts_list_v3", "persona": "A", "target_tool": "clint_contacts_list", "variation": 3, "prompt": "lista minha base de leads"},
+
+  {"prompt_id": "A_clint_contacts_tags_add_v1", "persona": "A", "target_tool": "clint_contacts_tags_add", "variation": 1, "prompt": "marca essa daí como quente"},
+  {"prompt_id": "A_clint_contacts_tags_add_v2", "persona": "A", "target_tool": "clint_contacts_tags_add", "variation": 2, "prompt": "coloca a tag de mentoria nela"},
+  {"prompt_id": "A_clint_contacts_tags_add_v3", "persona": "A", "target_tool": "clint_contacts_tags_add", "variation": 3, "prompt": "põe etiqueta de interessada nesse contato"},
+
+  {"prompt_id": "A_clint_contacts_tags_remove_v1", "persona": "A", "target_tool": "clint_contacts_tags_remove", "variation": 1, "prompt": "tira a tag de fria dela, ela voltou a falar"},
+  {"prompt_id": "A_clint_contacts_tags_remove_v2", "persona": "A", "target_tool": "clint_contacts_tags_remove", "variation": 2, "prompt": "remove aquela etiqueta desse contato aí"},
+  {"prompt_id": "A_clint_contacts_tags_remove_v3", "persona": "A", "target_tool": "clint_contacts_tags_remove", "variation": 3, "prompt": "desmarca a tag dessa pessoa"},
+
+  {"prompt_id": "A_clint_contacts_update_v1", "persona": "A", "target_tool": "clint_contacts_update", "variation": 1, "prompt": "atualiza o email da Bruna pra novo arroba gmail"},
+  {"prompt_id": "A_clint_contacts_update_v2", "persona": "A", "target_tool": "clint_contacts_update", "variation": 2, "prompt": "muda o telefone desse contato"},
+  {"prompt_id": "A_clint_contacts_update_v3", "persona": "A", "target_tool": "clint_contacts_update", "variation": 3, "prompt": "edita aí o nome dela tá errado"},
+
+  {"prompt_id": "A_clint_dashboards_data_get_v1", "persona": "A", "target_tool": "clint_dashboards_data_get", "variation": 1, "prompt": "me dá um resumo daquele painel"},
+  {"prompt_id": "A_clint_dashboards_data_get_v2", "persona": "A", "target_tool": "clint_dashboards_data_get", "variation": 2, "prompt": "puxa os números do dashboard aí"},
+  {"prompt_id": "A_clint_dashboards_data_get_v3", "persona": "A", "target_tool": "clint_dashboards_data_get", "variation": 3, "prompt": "abre aquela tela de gráficos com os dados"},
+
+  {"prompt_id": "A_clint_dashboards_get_v1", "persona": "A", "target_tool": "clint_dashboards_get", "variation": 1, "prompt": "abre aquele painel principal pra mim"},
+  {"prompt_id": "A_clint_dashboards_get_v2", "persona": "A", "target_tool": "clint_dashboards_get", "variation": 2, "prompt": "me mostra a tela de relatórios"},
+  {"prompt_id": "A_clint_dashboards_get_v3", "persona": "A", "target_tool": "clint_dashboards_get", "variation": 3, "prompt": "puxa esse dashboard aí"},
+
+  {"prompt_id": "A_clint_dashboards_list_v1", "persona": "A", "target_tool": "clint_dashboards_list", "variation": 1, "prompt": "quais painéis eu tenho?"},
+  {"prompt_id": "A_clint_dashboards_list_v2", "persona": "A", "target_tool": "clint_dashboards_list", "variation": 2, "prompt": "lista todos os dashboards aí"},
+  {"prompt_id": "A_clint_dashboards_list_v3", "persona": "A", "target_tool": "clint_dashboards_list", "variation": 3, "prompt": "me mostra as telas de gráficos que tenho"},
+
+  {"prompt_id": "A_clint_deals_create_v1", "persona": "A", "target_tool": "clint_deals_create", "variation": 1, "prompt": "cria uma negociação nova pra Marina, mentoria 997"},
+  {"prompt_id": "A_clint_deals_create_v2", "persona": "A", "target_tool": "clint_deals_create", "variation": 2, "prompt": "abre uma oportunidade nova aí"},
+  {"prompt_id": "A_clint_deals_create_v3", "persona": "A", "target_tool": "clint_deals_create", "variation": 3, "prompt": "bota essa lead no funil"},
+
+  {"prompt_id": "A_clint_deals_delete_v1", "persona": "A", "target_tool": "clint_deals_delete", "variation": 1, "prompt": "apaga essa negociação aí"},
+  {"prompt_id": "A_clint_deals_delete_v2", "persona": "A", "target_tool": "clint_deals_delete", "variation": 2, "prompt": "deleta esse deal duplicado"},
+  {"prompt_id": "A_clint_deals_delete_v3", "persona": "A", "target_tool": "clint_deals_delete", "variation": 3, "prompt": "remove aquela oportunidade do funil"},
+
+  {"prompt_id": "A_clint_deals_get_v1", "persona": "A", "target_tool": "clint_deals_get", "variation": 1, "prompt": "me mostra os detalhes dessa negociação"},
+  {"prompt_id": "A_clint_deals_get_v2", "persona": "A", "target_tool": "clint_deals_get", "variation": 2, "prompt": "abre aquela venda da Pri pra eu ver"},
+  {"prompt_id": "A_clint_deals_get_v3", "persona": "A", "target_tool": "clint_deals_get", "variation": 3, "prompt": "puxa info desse deal aí"},
+
+  {"prompt_id": "A_clint_deals_list_v1", "persona": "A", "target_tool": "clint_deals_list", "variation": 1, "prompt": "quem tá no carrinho agora?"},
+  {"prompt_id": "A_clint_deals_list_v2", "persona": "A", "target_tool": "clint_deals_list", "variation": 2, "prompt": "lista minhas vendas em aberto"},
+  {"prompt_id": "A_clint_deals_list_v3", "persona": "A", "target_tool": "clint_deals_list", "variation": 3, "prompt": "me mostra o funil aí"},
+
+  {"prompt_id": "A_clint_deals_update_v1", "persona": "A", "target_tool": "clint_deals_update", "variation": 1, "prompt": "marca essa negociação como ganha, deu venda"},
+  {"prompt_id": "A_clint_deals_update_v2", "persona": "A", "target_tool": "clint_deals_update", "variation": 2, "prompt": "muda o valor daquele deal pra 1497"},
+  {"prompt_id": "A_clint_deals_update_v3", "persona": "A", "target_tool": "clint_deals_update", "variation": 3, "prompt": "atualiza a etapa dessa oportunidade"},
+
+  {"prompt_id": "A_clint_groups_get_v1", "persona": "A", "target_tool": "clint_groups_get", "variation": 1, "prompt": "me mostra esse grupo aí"},
+  {"prompt_id": "A_clint_groups_get_v2", "persona": "A", "target_tool": "clint_groups_get", "variation": 2, "prompt": "abre detalhes daquele grupo de alunas"},
+  {"prompt_id": "A_clint_groups_get_v3", "persona": "A", "target_tool": "clint_groups_get", "variation": 3, "prompt": "puxa info desse grupo"},
+
+  {"prompt_id": "A_clint_groups_list_v1", "persona": "A", "target_tool": "clint_groups_list", "variation": 1, "prompt": "quais grupos eu tenho?"},
+  {"prompt_id": "A_clint_groups_list_v2", "persona": "A", "target_tool": "clint_groups_list", "variation": 2, "prompt": "lista todos meus grupos aí"},
+  {"prompt_id": "A_clint_groups_list_v3", "persona": "A", "target_tool": "clint_groups_list", "variation": 3, "prompt": "me mostra os grupos cadastrados"},
+
+  {"prompt_id": "A_clint_lost_status_get_v1", "persona": "A", "target_tool": "clint_lost_status_get", "variation": 1, "prompt": "me mostra aquele motivo de perda específico"},
+  {"prompt_id": "A_clint_lost_status_get_v2", "persona": "A", "target_tool": "clint_lost_status_get", "variation": 2, "prompt": "abre detalhe desse motivo de não venda"},
+  {"prompt_id": "A_clint_lost_status_get_v3", "persona": "A", "target_tool": "clint_lost_status_get", "variation": 3, "prompt": "puxa esse status de perdido aí"},
+
+  {"prompt_id": "A_clint_lost_status_list_v1", "persona": "A", "target_tool": "clint_lost_status_list", "variation": 1, "prompt": "quais motivos de perda eu tenho cadastrado?"},
+  {"prompt_id": "A_clint_lost_status_list_v2", "persona": "A", "target_tool": "clint_lost_status_list", "variation": 2, "prompt": "lista os motivos de não fechei"},
+  {"prompt_id": "A_clint_lost_status_list_v3", "persona": "A", "target_tool": "clint_lost_status_list", "variation": 3, "prompt": "me mostra os motivos pra perder venda"},
+
+  {"prompt_id": "A_clint_message_templates_get_v1", "persona": "A", "target_tool": "clint_message_templates_get", "variation": 1, "prompt": "abre aquele template de boas vindas"},
+  {"prompt_id": "A_clint_message_templates_get_v2", "persona": "A", "target_tool": "clint_message_templates_get", "variation": 2, "prompt": "me mostra esse modelo de mensagem"},
+  {"prompt_id": "A_clint_message_templates_get_v3", "persona": "A", "target_tool": "clint_message_templates_get", "variation": 3, "prompt": "puxa o template do zap aí"},
+
+  {"prompt_id": "A_clint_message_templates_list_v1", "persona": "A", "target_tool": "clint_message_templates_list", "variation": 1, "prompt": "quais modelos de mensagem eu tenho?"},
+  {"prompt_id": "A_clint_message_templates_list_v2", "persona": "A", "target_tool": "clint_message_templates_list", "variation": 2, "prompt": "lista meus templates do zap aprovados"},
+  {"prompt_id": "A_clint_message_templates_list_v3", "persona": "A", "target_tool": "clint_message_templates_list", "variation": 3, "prompt": "me mostra os textos prontos que tenho"},
+
+  {"prompt_id": "A_clint_messages_audio_send_v1", "persona": "A", "target_tool": "clint_messages_audio_send", "variation": 1, "prompt": "manda esse áudio pra ela aí"},
+  {"prompt_id": "A_clint_messages_audio_send_v2", "persona": "A", "target_tool": "clint_messages_audio_send", "variation": 2, "prompt": "dispara um áudio no zap pra Pri"},
+  {"prompt_id": "A_clint_messages_audio_send_v3", "persona": "A", "target_tool": "clint_messages_audio_send", "variation": 3, "prompt": "envia esse mp3 de voz pra ela"},
+
+  {"prompt_id": "A_clint_messages_by_chat_list_v1", "persona": "A", "target_tool": "clint_messages_by_chat_list", "variation": 1, "prompt": "me mostra as mensagens dessa conversa"},
+  {"prompt_id": "A_clint_messages_by_chat_list_v2", "persona": "A", "target_tool": "clint_messages_by_chat_list", "variation": 2, "prompt": "o que a gente trocou nesse chat?"},
+  {"prompt_id": "A_clint_messages_by_chat_list_v3", "persona": "A", "target_tool": "clint_messages_by_chat_list", "variation": 3, "prompt": "puxa o histórico de zap dessa conversa aí"},
+
+  {"prompt_id": "A_clint_messages_document_send_v1", "persona": "A", "target_tool": "clint_messages_document_send", "variation": 1, "prompt": "manda o pdf da mentoria pra ela"},
+  {"prompt_id": "A_clint_messages_document_send_v2", "persona": "A", "target_tool": "clint_messages_document_send", "variation": 2, "prompt": "envia esse arquivo no zap"},
+  {"prompt_id": "A_clint_messages_document_send_v3", "persona": "A", "target_tool": "clint_messages_document_send", "variation": 3, "prompt": "dispara o documento pra essa cliente"},
+
+  {"prompt_id": "A_clint_messages_get_v1", "persona": "A", "target_tool": "clint_messages_get", "variation": 1, "prompt": "me mostra aquela mensagem específica"},
+  {"prompt_id": "A_clint_messages_get_v2", "persona": "A", "target_tool": "clint_messages_get", "variation": 2, "prompt": "abre detalhe desse zap que mandei"},
+  {"prompt_id": "A_clint_messages_get_v3", "persona": "A", "target_tool": "clint_messages_get", "variation": 3, "prompt": "puxa essa mensagem aí"},
+
+  {"prompt_id": "A_clint_messages_image_send_v1", "persona": "A", "target_tool": "clint_messages_image_send", "variation": 1, "prompt": "manda a foto do depoimento pra Marina"},
+  {"prompt_id": "A_clint_messages_image_send_v2", "persona": "A", "target_tool": "clint_messages_image_send", "variation": 2, "prompt": "envia essa imagem no zap aí"},
+  {"prompt_id": "A_clint_messages_image_send_v3", "persona": "A", "target_tool": "clint_messages_image_send", "variation": 3, "prompt": "dispara o print pra ela"},
+
+  {"prompt_id": "A_clint_messages_template_send_v1", "persona": "A", "target_tool": "clint_messages_template_send", "variation": 1, "prompt": "manda aquele template de boas vindas pra galera nova"},
+  {"prompt_id": "A_clint_messages_template_send_v2", "persona": "A", "target_tool": "clint_messages_template_send", "variation": 2, "prompt": "dispara o modelo pra essa lead aí"},
+  {"prompt_id": "A_clint_messages_template_send_v3", "persona": "A", "target_tool": "clint_messages_template_send", "variation": 3, "prompt": "envia o template pronto fora da janela de 24h"},
+
+  {"prompt_id": "A_clint_messages_text_send_v1", "persona": "A", "target_tool": "clint_messages_text_send", "variation": 1, "prompt": "manda um zap pra Pri perguntando se ela viu"},
+  {"prompt_id": "A_clint_messages_text_send_v2", "persona": "A", "target_tool": "clint_messages_text_send", "variation": 2, "prompt": "responde ela ali, fala que tô atrás dela"},
+  {"prompt_id": "A_clint_messages_text_send_v3", "persona": "A", "target_tool": "clint_messages_text_send", "variation": 3, "prompt": "dispara essa mensagem de texto pra cliente"},
+
+  {"prompt_id": "A_clint_organizations_get_v1", "persona": "A", "target_tool": "clint_organizations_get", "variation": 1, "prompt": "me mostra os dados daquela empresa"},
+  {"prompt_id": "A_clint_organizations_get_v2", "persona": "A", "target_tool": "clint_organizations_get", "variation": 2, "prompt": "abre essa organização pra eu ver"},
+  {"prompt_id": "A_clint_organizations_get_v3", "persona": "A", "target_tool": "clint_organizations_get", "variation": 3, "prompt": "puxa info dessa empresa aí"},
+
+  {"prompt_id": "A_clint_organizations_update_v1", "persona": "A", "target_tool": "clint_organizations_update", "variation": 1, "prompt": "muda o nome daquela empresa"},
+  {"prompt_id": "A_clint_organizations_update_v2", "persona": "A", "target_tool": "clint_organizations_update", "variation": 2, "prompt": "atualiza os dados dessa organização"},
+  {"prompt_id": "A_clint_organizations_update_v3", "persona": "A", "target_tool": "clint_organizations_update", "variation": 3, "prompt": "edita aí a empresa, tá com info errada"},
+
+  {"prompt_id": "A_clint_origins_get_v1", "persona": "A", "target_tool": "clint_origins_get", "variation": 1, "prompt": "me mostra aquela origem específica"},
+  {"prompt_id": "A_clint_origins_get_v2", "persona": "A", "target_tool": "clint_origins_get", "variation": 2, "prompt": "abre detalhe dessa fonte de lead"},
+  {"prompt_id": "A_clint_origins_get_v3", "persona": "A", "target_tool": "clint_origins_get", "variation": 3, "prompt": "puxa info desse canal de entrada aí"},
+
+  {"prompt_id": "A_clint_origins_list_v1", "persona": "A", "target_tool": "clint_origins_list", "variation": 1, "prompt": "de onde tá vindo minhas leads?"},
+  {"prompt_id": "A_clint_origins_list_v2", "persona": "A", "target_tool": "clint_origins_list", "variation": 2, "prompt": "lista as origens cadastradas"},
+  {"prompt_id": "A_clint_origins_list_v3", "persona": "A", "target_tool": "clint_origins_list", "variation": 3, "prompt": "me mostra os canais de entrada"},
+
+  {"prompt_id": "A_clint_tags_create_v1", "persona": "A", "target_tool": "clint_tags_create", "variation": 1, "prompt": "cria uma tag de quente aí"},
+  {"prompt_id": "A_clint_tags_create_v2", "persona": "A", "target_tool": "clint_tags_create", "variation": 2, "prompt": "adiciona uma etiqueta nova chamada vip"},
+  {"prompt_id": "A_clint_tags_create_v3", "persona": "A", "target_tool": "clint_tags_create", "variation": 3, "prompt": "bota uma tag nova pra mentoria"},
+
+  {"prompt_id": "A_clint_tags_delete_v1", "persona": "A", "target_tool": "clint_tags_delete", "variation": 1, "prompt": "apaga aquela tag que não uso mais"},
+  {"prompt_id": "A_clint_tags_delete_v2", "persona": "A", "target_tool": "clint_tags_delete", "variation": 2, "prompt": "remove essa etiqueta velha aí"},
+  {"prompt_id": "A_clint_tags_delete_v3", "persona": "A", "target_tool": "clint_tags_delete", "variation": 3, "prompt": "deleta a tag de teste"},
+
+  {"prompt_id": "A_clint_tags_get_v1", "persona": "A", "target_tool": "clint_tags_get", "variation": 1, "prompt": "me mostra essa tag aí"},
+  {"prompt_id": "A_clint_tags_get_v2", "persona": "A", "target_tool": "clint_tags_get", "variation": 2, "prompt": "abre detalhe daquela etiqueta"},
+  {"prompt_id": "A_clint_tags_get_v3", "persona": "A", "target_tool": "clint_tags_get", "variation": 3, "prompt": "puxa info dessa tag específica"},
+
+  {"prompt_id": "A_clint_tags_list_v1", "persona": "A", "target_tool": "clint_tags_list", "variation": 1, "prompt": "quais tags eu tenho criadas?"},
+  {"prompt_id": "A_clint_tags_list_v2", "persona": "A", "target_tool": "clint_tags_list", "variation": 2, "prompt": "lista minhas etiquetas aí"},
+  {"prompt_id": "A_clint_tags_list_v3", "persona": "A", "target_tool": "clint_tags_list", "variation": 3, "prompt": "me mostra todas as tags"},
+
+  {"prompt_id": "A_clint_users_get_v1", "persona": "A", "target_tool": "clint_users_get", "variation": 1, "prompt": "me mostra dados desse usuário aí"},
+  {"prompt_id": "A_clint_users_get_v2", "persona": "A", "target_tool": "clint_users_get", "variation": 2, "prompt": "abre a ficha dessa pessoa da minha equipe"},
+  {"prompt_id": "A_clint_users_get_v3", "persona": "A", "target_tool": "clint_users_get", "variation": 3, "prompt": "puxa info dessa usuária"},
+
+  {"prompt_id": "A_clint_users_list_v1", "persona": "A", "target_tool": "clint_users_list", "variation": 1, "prompt": "quem tá usando a conta comigo?"},
+  {"prompt_id": "A_clint_users_list_v2", "persona": "A", "target_tool": "clint_users_list", "variation": 2, "prompt": "lista o pessoal da minha equipe aí"},
+  {"prompt_id": "A_clint_users_list_v3", "persona": "A", "target_tool": "clint_users_list", "variation": 3, "prompt": "me mostra os usuários do clint"}
+]

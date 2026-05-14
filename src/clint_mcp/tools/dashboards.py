@@ -5,7 +5,7 @@ from typing import Annotated, Any
 
 from pydantic import Field
 
-from clint_mcp.client import request
+from clint_mcp._shared import request
 
 
 async def clint_charts_data_get(chart_id: Annotated[str, Field(description="""Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")], date_start: Annotated[str | None, Field(description="""Start date filter (inclusive). Example: '2026-01-01'""")] = None, date_end: Annotated[str | None, Field(description="""End date filter (inclusive). Example: '2026-12-31'""")] = None, user_id: Annotated[str | None, Field(description="""Filter by user ID. Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, origin_id: Annotated[str | None, Field(description="""Filter by origin ID. Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, origin_group_id: Annotated[str | None, Field(description="""Filter by origin group ID. Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, tag_id: Annotated[str | None, Field(description="""Filter by tag ID. Format: UUID (e.g. '550e8400-e29b-41d4-a716-446655440000'). Example: '8feade82-d77b-4e8b-9d35-fd43e972b5c8'""")] = None, timezone: Annotated[str | None, Field(description="""Timezone for date calculations. Example: 'America/Sao_Paulo'""")] = None, limit: Annotated[int | None, Field(description="""Limit rows returned (applies to table/list chart types). Type: integer""")] = None) -> Any:
