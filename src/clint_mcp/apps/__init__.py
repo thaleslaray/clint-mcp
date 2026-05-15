@@ -1,4 +1,6 @@
-"""Prefab Apps — interactive dashboards rendered inside the MCP client."""
-from clint_mcp.apps.dashboards import clint_dashboard_view
+"""Prefab Apps — interactive UIs rendered inside the MCP client.
 
-ALL_APPS = [clint_dashboard_view]
+Apps are auto-discovered by `server.py`: any async function in this package
+whose name ends with `_app` is registered with `mcp.tool(app=True)`.
+Don't maintain a manual ALL_APPS list — just create files here.
+"""

@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.3.0 — 2026-05-14
+
+Dual-mode architecture (adopting hotmart-mcp v0.6+ pattern). Code Mode is now opt-in via env var instead of always-on, allowing Prefab UI apps to render in Claude Desktop while preserving context-window savings on Claude Code CLI.
+
+### Changed (BREAKING for explicit invocations only)
+
+- **`server.py` rewritten** with auto-discovery (`pkgutil` + `inspect.getmembers`) for both tools and apps. No more manual `ALL_TOOLS` / `ALL_APPS` registries.
+- **Code Mode is now OPT-IN** via env var `CLINT_MCP_CODE_MODE=1`. Default off because CodeMode collapses `app=True` tools too, breaking Prefab UI rendering. Set the var when you want context savings (Claude Code CLI), leave unset for Desktop.
+- **App naming convention**: apps must end with `_app` to be discovered. `clint_dashboard_view` → `clint_dashboard_view_app`. If you were calling the old name directly via `execute()`, update.
+
+### Internal
+
+- `tools/__init__.py` slimmed down — no longer maintains `ALL_TOOLS` (auto-discovery removed the need).
+- `apps/__init__.py` updated with discovery convention docs.
+- Generator emits leaner `__init__.py`.
+
+### Migration
+
+If you were using `clint_dashboard_view` via Code Mode `execute()`, rename to `clint_dashboard_view_app`. Everything else unchanged.
+
+To enable the new dual-mode in your Claude Code config (`~/.claude.json`), add:
+```json
+"env": {
+  "CLINT_API_TOKEN": "...",
+  "CLINT_MCP_CODE_MODE": "1"
+}
+```
+
+---
+
 ## 0.2.0 — 2026-05-14
 
 Alignment with the established `<name>-mcp` project layout (matches hotmart-mcp conventions) + Prefab Apps.

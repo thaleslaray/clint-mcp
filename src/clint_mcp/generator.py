@@ -442,21 +442,11 @@ def main() -> None:
         )
         (TOOLS_DIR / f"{module}.py").write_text(header + "\n\n".join(funcs))
 
-    # Write __init__.py exporting everything.
-    init_lines = ['"""Auto-generated tool registry."""']
-    for module in sorted(by_module):
-        init_lines.append(f"from clint_mcp.tools import {module} as _{module}  # noqa: F401")
-    init_lines.append("")
-    init_lines.append("ALL_TOOLS = [")
-    for name in sorted(all_exports):
-        # find which module owns it: scan modules
-        for module in sorted(by_module):
-            mod_tools = [TOOL_NAMES[(m, p)] for m, p, *_ in by_module[module]]
-            if name.replace("clint_", "", 1) in mod_tools:
-                init_lines.append(f"    _{module}.{name},")
-                break
-    init_lines.append("]")
-    (TOOLS_DIR / "__init__.py").write_text("\n".join(init_lines) + "\n")
+    # __init__.py is intentionally minimal — server.py auto-discovers tool modules
+    # via pkgutil. Don't maintain a manual ALL_TOOLS list (matches hotmart-mcp pattern).
+    (TOOLS_DIR / "__init__.py").write_text(
+        '"""Auto-generated tool modules. Server.py discovers async functions here via pkgutil."""\n'
+    )
 
     print(f"Generated {len(all_exports)} tools across {len(by_module)} modules:")
     for module, ops in sorted(by_module.items()):

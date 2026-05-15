@@ -8,7 +8,7 @@ from pydantic import Field
 from clint_mcp._shared import request
 
 
-async def clint_tags_create(color: Annotated[str, Field(description="""Allowed values (case-sensitive, pass EXACTLY as listed):
+async def clint_tags_create(name: Annotated[str, Field(description="""Example: 'Tag name'""")], color: Annotated[str, Field(description="""Allowed values (case-sensitive, pass EXACTLY as listed):
   - '#f44336'
   - '#e91e63'
   - '#9c27b0'
@@ -24,7 +24,7 @@ async def clint_tags_create(color: Annotated[str, Field(description="""Allowed v
   - '#ff9800'
   - '#ff5722'
   - '#795548'
-  - '#607d8b'""")], name: Annotated[str, Field(description="""Example: 'Tag name'""")]) -> Any:
+  - '#607d8b'""")]) -> Any:
     """Create tag
 
     Create a new tag

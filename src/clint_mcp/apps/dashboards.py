@@ -101,7 +101,7 @@ CHART_RENDERERS = {
 }
 
 
-async def clint_dashboard_view(
+async def clint_dashboard_view_app(
     dashboard_id: Annotated[
         str,
         Field(description="UUID of the Clint dashboard to render. Use clint_dashboards_list to discover IDs."),
