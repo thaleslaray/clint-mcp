@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.4.0 — 2026-05-17
+
+Five new Prefab UI apps covering the operational core of a sales-via-WhatsApp workflow. All apps follow the `clint_<name>_app` naming convention and are auto-discovered.
+
+### Added apps
+
+- **`clint_pipeline_dashboard_app(days=30)`** — KPIs do funil + distribuição por etapa + receita por origem + top 10 deals abertos. Cruza `deals` + `origins`.
+- **`clint_deal_inbox_app(owner_email?, origin_id?, tag_names?, min_value?, days=30, limit=100)`** — Triagem de oportunidades em aberto com filtros operacionais (SDR/Closer view).
+- **`clint_sales_performance_app(days=30)`** — Leaderboard de revenue/win rate por rep. BarChart top 10 + DataTable com win rate, ticket médio, $ perdido.
+- **`clint_contact_360_app(contact_id)`** — Perfil consolidado: Tabs (Overview / Deals / Conversas / Anexos), KPIs (LTV, # deals, # chats), tags como badges.
+- **`clint_whatsapp_inbox_app(channel_account_id?, chat_id?, limit=20)`** — Inbox WhatsApp Official. Lista chats recentes + (opcional) thread de mensagens da conversa.
+
+### Notes
+
+- Todos os apps são read-only — não há CallTool/update inline ainda. Edição inline e composer WhatsApp vêm em v0.5+ via `FastMCPApp`.
+- Auto-discovery via sufixo `_app` continua: criar `apps/<nome>.py` com função async terminando em `_app` é suficiente.
+- Apps renderizam visualmente apenas em clientes Prefab-capable (Claude Desktop, `fastmcp dev`). No Claude Code CLI ainda mostram JSON serializado.
+
+---
+
 ## 0.3.0 — 2026-05-14
 
 Dual-mode architecture (adopting hotmart-mcp v0.6+ pattern). Code Mode is now opt-in via env var instead of always-on, allowing Prefab UI apps to render in Claude Desktop while preserving context-window savings on Claude Code CLI.
